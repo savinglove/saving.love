@@ -1,3 +1,3 @@
 # saving.love
-Information about Heaven <br>
+Information about Heaven. <br>
 Donations unaccepted.
