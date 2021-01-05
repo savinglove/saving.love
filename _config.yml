@@ -1,0 +1,3 @@
+markdown: redcarpet
+url: http://saving.love
+exclude: ['README.md']
