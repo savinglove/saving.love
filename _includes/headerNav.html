@@ -3,17 +3,17 @@
 <body>
     <div class="everything"><TABLE class="tableContainer" style="width:100%;height:100%"><TBODY style="height:100%"><TR class="topRowHeaderContainer"><TD class="topCellHeader" style="position:relative"><div class="firstHeaderDiv"><div class="secondHeaderDiv"><div class="brandContainerParent">
         <div class="brandContainer">
-            <a class="brand" href="http://saving.love/" >How&nbsp;To&nbsp;Get&nbsp;To&nbsp;Heaven</a></div></div><div class=thirdHeaderDiv><ul class="firstHeaderList"><li class="firstHeaderListItems" id="firstHeaderListItems"><ul class="secondHeaderListA">
+            <a class="brand" href="{{ base }}" >How&nbsp;To&nbsp;Get&nbsp;To&nbsp;Heaven</a></div></div><div class=thirdHeaderDiv><ul class="firstHeaderList"><li class="firstHeaderListItems" id="firstHeaderListItems"><ul class="secondHeaderListA">
     <li class="ListItemsA1" id="ListItemsA1" style="display:inline;position:relative;float:left;width:100%;text-align:center;zoom:1;margin:0">    
-      <a href="http://saving.love/share/" class="{% if page.active == 'share' %}current{% endif %} firstHeaderLinkPrint">Share&nbsp;the&nbsp;gospel</a>
+      <a href="{{ base }}/share/" class="{% if page.active == 'share' %}current{% endif %} firstHeaderLinkPrint">Share&nbsp;the&nbsp;gospel</a>
     </li>
     </ul>
     <ul  class="secondHeaderListB">
     <li class="listItemsB1">
-        <a href="http://saving.love/" class="{% if page.active == 'home' %}current{% endif %} secondHeaderLinkHome">The&nbsp;good&nbsp;news</a>
+        <a href="{{ base }}" class="{% if page.active == 'home' %}current{% endif %} secondHeaderLinkHome">The&nbsp;good&nbsp;news</a>
     </li>
     <li class="listItemsB2">
-        <a href="http://saving.love/more/" class="{% if page.active == 'more' %}current{% endif %} thirdHeaderLinkMore">More</a>
+        <a href="{{ base }}/more/" class="{% if page.active == 'more' %}current{% endif %} thirdHeaderLinkMore">More</a>
     </li>
     </ul>
     </li>
