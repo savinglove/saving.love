@@ -12,8 +12,8 @@ active: home
       <div
         class="imgOnly col-xs-width100 col-xs-alone col-sm-width100 col-sm-alone col-md-2 col-md-push-5 col-lg-2 col-lg-push-5 actualContentCell">
         <div class="col-xs-7 col-sm-5 col-md-12 col-lg-12 imgrect gospelHeartPNG"
-          data-imgcontainrect-src="the-gospel-is-the-good-news.png">
-          <img src="the-gospel-is-the-good-news.png">
+          data-imgcontainrect-src="{{ base }}/the-gospel-is-the-good-news.png">
+          <img src="{{ base }}/the-gospel-is-the-good-news.png">
         </div>
       </div>
       <div class="col-xs-width100 col-sm-6 col-md-5 col-md-pull-2 col-lg-5 col-lg-pull-2 actualContentCell">
@@ -41,7 +41,7 @@ active: home
             <li class="vwLargerWindow-li"><span class="verseSpan">"God saved you by grace when you believed. You can't
                 take credit for this; it's the gift of God." (Ephesians&nbsp;2:9)</span></li>
             <hr class="li-hr">
-            <li class="vwLargerWindow-li"><span class="verseSpan">"Peter replied: 'May your money perish with you for
+            <li class="vwLargerWindow-li"><span class="verseSpan">"Peter replied: 'May your money be destroyed with you for
                 thinking God's gift can be bought with money.'&nbsp;" (Acts&nbsp;8:20)</span></li>
             <hr class="li-hr">
             <li class="vwLargerWindow-li"><span class="verseSpan">"But we believe through the undeserved grace of the
@@ -65,7 +65,7 @@ active: home
             <li class="vwLargerWindow-li"><span class="verseSpan">"He was handed over to die for our sins, and was
                 raised to make us right with God." (Romans&nbsp;4:25)</span></li>
             <hr class="li-hr">
-            <li class="vwLargerWindow-li"><span class="verseSpan html">"What's most important I received and delivered to you: Christ died for our sins, as the Scriptures said; that he was buried, and that he rose again the third day according to the Scriptures:" (1&nbsp;Corinthians&nbsp;15:3-4)</span></li>
+            <li class="vwLargerWindow-li"><span class="verseSpan">"What's most important I received and delivered to you: Christ died for our sins, as the Scriptures said; that he was buried, and that he rose again the third day according to the Scriptures:" (1&nbsp;Corinthians&nbsp;15:3-4)</span></li>
             <hr class="li-hr">
             <li class="vwLargerWindow-li"><span class="verseSpan">"At just the right time, when we were still helpless,
                 Christ died for the ungodly." (Romans&nbsp;5:6)</span></li>
@@ -84,10 +84,10 @@ active: home
       <div class="imgOnly col-xs-width100 col-xs-alone col-sm-6 col-sm-alone col-md-2 col-lg-2 actualContentCell">
         <div class="imageCaptionContainer">
           <div class="imageCaptionTBODY">
-            <div class="imageCaptionRowAbove crossJesusPNG">
-              <div class="imgrectCaption">
-                <div class="imgrectCaptionChild imageCaptionHeader-sm col-xs-alone col-sm-alone ie6-xs-3 ie6-sm-5 imgrectagain" data-imgcontainrect-src="jesus-on-cross-transparent.png">
-                  <img src="jesus-on-cross-transparent.png" class="imgCaption col-xs-7 col-xs-alone col-sm-9 col-sm-alone htmlCheck">
+            <div class="imageCaptionRowAbove crossJesusPNG col-xs-alone col-sm-alone">
+              <div class="col-xs-alone col-sm-alone col-xs-3 col-sm-5 col-md-12 col-lg-12 imgrectCaption">
+                <div class="imgrectCaptionChild imageCaptionHeader-sm col-xs-alone col-sm-alone imgrectagain" data-imgcontainrect-src="{{ base }}/jesus-on-cross-transparent.png">
+                  <img src="{{ base }}/jesus-on-cross-transparent.png" class="imgCaption col-xs-alone col-sm-alone col-xs-3 col-sm-5 col-md-12 col-lg-12">
                 </div>
               </div>
             </div>
@@ -101,20 +101,19 @@ active: home
       </div>
 
 
-      <div
-        class="imgOnly col-xs-width100 col-xs-alone col-sm-6 col-sm-alone col-md-2 col-md-push-8 col-lg-2 col-lg-push-8 actualContentCell">
+      <div class="imgOnly col-xs-width100 col-xs-alone col-sm-6 col-sm-alone col-md-2 col-md-push-8 col-lg-2 col-lg-push-8 actualContentCell">
         <div class="imageCaptionContainer">
           <div class="imageCaptionTBODY">
-            <div class="imageCaptionRowAbove coinPNG">
-              <div class="imgrectCaption">
-                <div class="imgrectCaptionChild imageCaptionHeader-sm col-xs-alone col-sm-alone ie6-xs-7 ie6-sm-9 imgrectagain" data-imgcontainrect-src="coin.png">
-                  <img src="coin.png" class="imgCaption col-xs-7 col-xs-alone col-sm-9 col-sm-alone htmlCheck">
+            <div class="imageCaptionRowAbove coinPNG col-xs-alone col-sm-alone">
+              <div class="col-xs-alone col-sm-alone col-xs-7 col-sm-9 col-md-12 col-lg-12 imgrectCaption">
+                <div class="imgrectCaptionChild imageCaptionHeader-sm col-xs-alone col-sm-alone imgrectagain" data-imgcontainrect-src="{{ base }}/coin.png">
+                  <img src="{{ base }}/coin.png" class="imgCaption col-xs-alone col-sm-alone col-xs-7 col-sm-9 col-md-12 col-lg-12">
                 </div>
               </div>
             </div>
             <div class="textCaptionHeader-xs textCaptionHeader-sm textCaptionRow textCaptionRowBelow">
               <div>
-                <p class="pCaption">Heaven doesn't<br class="hidden-xs hidden-sm hidden-md"> cost money.</p>
+                <p class="pCaption"><a href="{{ base }}/heaven-is-free/">Heaven doesn't<br class="hidden-xs hidden-sm hidden-md"> cost money.</a></p>
               </div>
             </div>
           </div>
@@ -202,10 +201,194 @@ active: home
 
 
 
+<!--[if IE 9]><style> 
+/* Now we paste again here in these media queries for IE9. */
+
+
+@media (max-width:598px){
+
+    .imgCaption {
+      height: 1px;
+      visibility: hidden;
+    }
+
+    .imgrect>img {
+      visibility: hidden;
+    }
+
+    .untitledBluePNG {
+      background-image: url({{ base }}/Untitled.png);
+    }
+
+    .gospelHeartPNG {
+      background-image: url({{ base }}/the-gospel-is-the-good-news.png);
+    }
+
+    /* IE10 */
+    .crossJesusPNG {
+      background-image: url({{ base }}/jesus-on-cross-transparent.png);
+    }
+
+    /* IE10 */
+    .coinPNG {
+      background-image: url({{ base }}/coin.png);
+    }
+
+    /* IE10 */
+
+    .imageCaptionRowAbove.col-xs-alone {
+      background-image: none;
+    }
+    .col-xs-alone>.imgrect {
+      background-image: none;
+    }
+    
+    img.imgCaption.col-xs-alone {
+      visibility: visible;
+    }
+    /* This line of code is always inlined. */
+  }
+
+  @media (min-width:599px) and (max-width:991px){
+
+
+    .imgCaption {
+      height: 1px;
+      visibility: hidden;
+    }
+
+    .imgrect>img {
+      visibility: hidden;
+    }
+
+    .untitledBluePNG {
+      background-image: url({{ base }}/Untitled.png);
+    }
+
+    .gospelHeartPNG {
+      background-image: url({{ base }}/the-gospel-is-the-good-news.png);
+    }
+
+    /* IE10 */
+    .crossJesusPNG {
+      background-image: url({{ base }}/jesus-on-cross-transparent.png);
+    }
+
+    /* IE10 */
+    .coinPNG {
+      background-image: url({{ base }}/coin.png);
+    }
+
+    /* IE10 */
+
+    .imageCaptionRowAbove.col-sm-alone {
+      background-image: none;
+    }
+    .col-sm-alone>.imgrect {
+      background-image: none;
+    }
+    
+    img.imgCaption.col-sm-alone {
+      visibility: visible;
+    }
+    /* This line of code is always inlined. */
+  }
+  @media (min-width:992px) and (max-width:1426px){
+
+
+    .imgCaption {
+      height: 1px;
+      visibility: hidden;
+    }
+
+    .imgrect>img {
+      visibility: hidden;
+    }
+
+    .untitledBluePNG {
+      background-image: url({{ base }}/Untitled.png);
+    }
+
+    .gospelHeartPNG {
+      background-image: url({{ base }}/the-gospel-is-the-good-news.png);
+    }
+
+    /* IE10 */
+    .crossJesusPNG {
+      background-image: url({{ base }}/jesus-on-cross-transparent.png);
+    }
+
+    /* IE10 */
+    .coinPNG {
+      background-image: url({{ base }}/coin.png);
+    }
+
+    /* IE10 */
+
+    .imageCaptionRowAbove.col-md-alone {
+      background-image: none;
+    }
+    .col-md-alone>.imgrect {
+      background-image: none;
+    }
+    img.imgCaption.col-md-alone {
+      visibility: visible;
+    }
+    /* This line of code is always inlined. */
+  }
+
+
+  @media (min-width:1427px){
+
+    .imgCaption {
+      height: 1px;
+      visibility: hidden;
+    }
+
+    .imgrect>img {
+      visibility: hidden;
+    }
+
+    .untitledBluePNG {
+      background-image: url({{ base }}/Untitled.png);
+    }
+
+    .gospelHeartPNG {
+      background-image: url({{ base }}/the-gospel-is-the-good-news.png);
+    }
+
+    /* IE10 */
+    .crossJesusPNG {
+      background-image: url({{ base }}/jesus-on-cross-transparent.png);
+    }
+
+    /* IE10 */
+    .coinPNG {
+      background-image: url({{ base }}/coin.png);
+    }
+
+    /* IE10 */
+
+    .imageCaptionRowAbove.col-lg-alone {
+      background-image: none;
+    }
+    .col-lg-alone>.imgrect {
+      background-image: none;
+    }
+    
+    img.imgCaption.col-lg-alone {
+      visibility: visible;
+    }
+    /* This line of code is always inlined. */
+  }
+
+</style><![endif]-->
+
 
 
 <![if (!IE)]>
 <style>
+  /* IE 10 and IE11 */
   @media all and (-ms-high-contrast:none) and (max-width:598px) {
 
 
@@ -219,29 +402,35 @@ active: home
     }
 
     .untitledBluePNG {
-      background-image: url(Untitled.png);
+      background-image: url({{ base }}/Untitled.png);
     }
 
     .gospelHeartPNG {
-      background-image: url(the-gospel-is-the-good-news.png);
+      background-image: url({{ base }}/the-gospel-is-the-good-news.png);
     }
 
     /* IE10 */
     .crossJesusPNG {
-      background-image: url(jesus-on-cross-transparent.png);
+      background-image: url({{ base }}/jesus-on-cross-transparent.png);
     }
 
     /* IE10 */
     .coinPNG {
-      background-image: url(coin.png);
+      background-image: url({{ base }}/coin.png);
     }
 
     /* IE10 */
 
-    .col-xs-alone>div {
+    .imageCaptionRowAbove.col-xs-alone {
       background-image: none;
     }
-
+    .col-xs-alone>.imgrect {
+      background-image: none;
+    }
+    
+    img.imgCaption.col-xs-alone {
+      visibility: visible;
+    }
     /* This line of code is always inlined. */
   }
 
@@ -258,29 +447,35 @@ active: home
     }
 
     .untitledBluePNG {
-      background-image: url(Untitled.png);
+      background-image: url({{ base }}/Untitled.png);
     }
 
     .gospelHeartPNG {
-      background-image: url(the-gospel-is-the-good-news.png);
+      background-image: url({{ base }}/the-gospel-is-the-good-news.png);
     }
 
     /* IE10 */
     .crossJesusPNG {
-      background-image: url(jesus-on-cross-transparent.png);
+      background-image: url({{ base }}/jesus-on-cross-transparent.png);
     }
 
     /* IE10 */
     .coinPNG {
-      background-image: url(coin.png);
+      background-image: url({{ base }}/coin.png);
     }
 
     /* IE10 */
 
-    .col-sm-alone>div {
+    .imageCaptionRowAbove.col-sm-alone {
       background-image: none;
     }
-
+    .col-sm-alone>.imgrect {
+      background-image: none;
+    }
+    
+    img.imgCaption.col-sm-alone {
+      visibility: visible;
+    }
     /* This line of code is always inlined. */
   }
 
@@ -297,29 +492,34 @@ active: home
     }
 
     .untitledBluePNG {
-      background-image: url(Untitled.png);
+      background-image: url({{ base }}/Untitled.png);
     }
 
     .gospelHeartPNG {
-      background-image: url(the-gospel-is-the-good-news.png);
+      background-image: url({{ base }}/the-gospel-is-the-good-news.png);
     }
 
     /* IE10 */
     .crossJesusPNG {
-      background-image: url(jesus-on-cross-transparent.png);
+      background-image: url({{ base }}/jesus-on-cross-transparent.png);
     }
 
     /* IE10 */
     .coinPNG {
-      background-image: url(coin.png);
+      background-image: url({{ base }}/coin.png);
     }
 
     /* IE10 */
 
-    .col-md-alone>div {
+    .imageCaptionRowAbove.col-md-alone {
       background-image: none;
     }
-
+    .col-md-alone>.imgrect {
+      background-image: none;
+    }
+    img.imgCaption.col-md-alone {
+      visibility: visible;
+    }
     /* This line of code is always inlined. */
   }
 
@@ -336,34 +536,42 @@ active: home
     }
 
     .untitledBluePNG {
-      background-image: url(Untitled.png);
+      background-image: url({{ base }}/Untitled.png);
     }
 
     .gospelHeartPNG {
-      background-image: url(the-gospel-is-the-good-news.png);
+      background-image: url({{ base }}/the-gospel-is-the-good-news.png);
     }
 
     /* IE10 */
     .crossJesusPNG {
-      background-image: url(jesus-on-cross-transparent.png);
+      background-image: url({{ base }}/jesus-on-cross-transparent.png);
     }
 
     /* IE10 */
     .coinPNG {
-      background-image: url(coin.png);
+      background-image: url({{ base }}/coin.png);
     }
 
     /* IE10 */
 
-    .col-lg-alone>div {
+    .imageCaptionRowAbove.col-lg-alone {
       background-image: none;
     }
-
+    .col-lg-alone>.imgrect {
+      background-image: none;
+    }
+    
+    img.imgCaption.col-lg-alone {
+      visibility: visible;
+    }
     /* This line of code is always inlined. */
   }
 
-  /* Then we copy the above media queries again inside the supports, for old edge below: */
 
+
+
+  /* Old edge below: */
   @supports (-ms-ime-align: auto) {
 
     /* Non-IE styles here including no IE10 and no IE11 */
@@ -390,38 +598,44 @@ active: home
 
 
       .imgCaption {
-        height: 1px;
-        visibility: hidden;
-      }
+      height: 1px;
+      visibility: hidden;
+    }
 
-      .imgrect>img {
-        visibility: hidden;
-      }
+    .imgrect>img {
+      visibility: hidden;
+    }
 
-      .untitledBluePNG {
-        background-image: url(Untitled.png);
-      }
+    .untitledBluePNG {
+      background-image: url({{ base }}/Untitled.png);
+    }
 
-      .gospelHeartPNG {
-        background-image: url(the-gospel-is-the-good-news.png);
-      }
+    .gospelHeartPNG {
+      background-image: url({{ base }}/the-gospel-is-the-good-news.png);
+    }
 
-      /* IE10 */
-      .crossJesusPNG {
-        background-image: url(jesus-on-cross-transparent.png);
-      }
+    /* IE10 */
+    .crossJesusPNG {
+      background-image: url({{ base }}/jesus-on-cross-transparent.png);
+    }
 
-      /* IE10 */
-      .coinPNG {
-        background-image: url(coin.png);
-      }
+    /* IE10 */
+    .coinPNG {
+      background-image: url({{ base }}/coin.png);
+    }
 
-      /* IE10 */
+    /* IE10 */
 
-      .col-xs-alone>div {
-        background-image: none;
-      }
-
+    .imageCaptionRowAbove.col-xs-alone {
+      background-image: none;
+    }
+    .col-xs-alone>.imgrect {
+      background-image: none;
+    }
+    
+    img.imgCaption.col-xs-alone {
+      visibility: visible;
+    }
       /* This line of code is always inlined. */
     }
 
@@ -429,38 +643,44 @@ active: home
 
 
       .imgCaption {
-        height: 1px;
-        visibility: hidden;
-      }
+      height: 1px;
+      visibility: hidden;
+    }
 
-      .imgrect>img {
-        visibility: hidden;
-      }
+    .imgrect>img {
+      visibility: hidden;
+    }
 
-      .untitledBluePNG {
-        background-image: url(Untitled.png);
-      }
+    .untitledBluePNG {
+      background-image: url({{ base }}/Untitled.png);
+    }
 
-      .gospelHeartPNG {
-        background-image: url(the-gospel-is-the-good-news.png);
-      }
+    .gospelHeartPNG {
+      background-image: url({{ base }}/the-gospel-is-the-good-news.png);
+    }
 
-      /* IE10 */
-      .crossJesusPNG {
-        background-image: url(jesus-on-cross-transparent.png);
-      }
+    /* IE10 */
+    .crossJesusPNG {
+      background-image: url({{ base }}/jesus-on-cross-transparent.png);
+    }
 
-      /* IE10 */
-      .coinPNG {
-        background-image: url(coin.png);
-      }
+    /* IE10 */
+    .coinPNG {
+      background-image: url({{ base }}/coin.png);
+    }
 
-      /* IE10 */
+    /* IE10 */
 
-      .col-sm-alone>div {
-        background-image: none;
-      }
-
+    .imageCaptionRowAbove.col-sm-alone {
+      background-image: none;
+    }
+    .col-sm-alone>.imgrect {
+      background-image: none;
+    }
+    
+    img.imgCaption.col-sm-alone {
+      visibility: visible;
+    }
       /* This line of code is always inlined. */
     }
 
@@ -468,77 +688,87 @@ active: home
 
 
       .imgCaption {
-        height: 1px;
-        visibility: hidden;
-      }
+      height: 1px;
+      visibility: hidden;
+    }
 
-      .imgrect>img {
-        visibility: hidden;
-      }
+    .imgrect>img {
+      visibility: hidden;
+    }
 
-      .untitledBluePNG {
-        background-image: url(Untitled.png);
-      }
+    .untitledBluePNG {
+      background-image: url({{ base }}/Untitled.png);
+    }
 
-      .gospelHeartPNG {
-        background-image: url(the-gospel-is-the-good-news.png);
-      }
+    .gospelHeartPNG {
+      background-image: url({{ base }}/the-gospel-is-the-good-news.png);
+    }
 
-      /* IE10 */
-      .crossJesusPNG {
-        background-image: url(jesus-on-cross-transparent.png);
-      }
+    /* IE10 */
+    .crossJesusPNG {
+      background-image: url({{ base }}/jesus-on-cross-transparent.png);
+    }
 
-      /* IE10 */
-      .coinPNG {
-        background-image: url(coin.png);
-      }
+    /* IE10 */
+    .coinPNG {
+      background-image: url({{ base }}/coin.png);
+    }
 
-      /* IE10 */
+    /* IE10 */
 
-      .col-md-alone>div {
-        background-image: none;
-      }
+    .imageCaptionRowAbove.col-md-alone {
+      background-image: none;
+    }
+    .col-md-alone>.imgrect {
+      background-image: none;
+    }
+    img.imgCaption.col-md-alone {
+      visibility: visible;
+    }
 
       /* This line of code is always inlined. */
     }
 
     @media (min-width:1427px) {
-
-
       .imgCaption {
-        height: 1px;
-        visibility: hidden;
-      }
+      height: 1px;
+      visibility: hidden;
+    }
 
-      .imgrect>img {
-        visibility: hidden;
-      }
+    .imgrect>img {
+      visibility: hidden;
+    }
 
-      .untitledBluePNG {
-        background-image: url(Untitled.png);
-      }
+    .untitledBluePNG {
+      background-image: url({{ base }}/Untitled.png);
+    }
 
-      .gospelHeartPNG {
-        background-image: url(the-gospel-is-the-good-news.png);
-      }
+    .gospelHeartPNG {
+      background-image: url({{ base }}/the-gospel-is-the-good-news.png);
+    }
 
-      /* IE10 */
-      .crossJesusPNG {
-        background-image: url(jesus-on-cross-transparent.png);
-      }
+    /* IE10 */
+    .crossJesusPNG {
+      background-image: url({{ base }}/jesus-on-cross-transparent.png);
+    }
 
-      /* IE10 */
-      .coinPNG {
-        background-image: url(coin.png);
-      }
+    /* IE10 */
+    .coinPNG {
+      background-image: url({{ base }}/coin.png);
+    }
 
-      /* IE10 */
+    /* IE10 */
 
-      .col-lg-alone>div {
-        background-image: none;
-      }
-
+    .imageCaptionRowAbove.col-lg-alone {
+      background-image: none;
+    }
+    .col-lg-alone>.imgrect {
+      background-image: none;
+    }
+    
+    img.imgCaption.col-lg-alone {
+      visibility: visible;
+    }
       /* This line of code is always inlined. */
     }
 
@@ -548,87 +778,6 @@ active: home
   }
 </style>
 <![endif]>
-
-<!--[if IE 9]><style> 
-/* Now we paste again here in these media queries for IE9. */
-
-
-    @media (max-width:598px){
-    
-
-    .imgCaption {
-      height: 1px; 
-      visibility: hidden;
-    }
-        .imgrect>img {visibility: hidden;}
-        .untitledBluePNG {background-image:url(Untitled.png);}
-        .gospelHeartPNG{background-image:url(the-gospel-is-the-good-news.png);} /* IE10 */
-        .crossJesusPNG{background-image:url(jesus-on-cross-transparent.png);} /* IE10 */
-        .coinPNG{background-image:url(coin.png);} /* IE10 */
-  
-        .col-xs-alone>div{background-image:none;} /* This line of code is always inlined. */
-    }
-  
-    @media (min-width:599px) and (max-width:991px){
-      
-  
-    .imgCaption {
-      height: 1px; 
-      visibility: hidden;
-    }
-        .imgrect>img {visibility: hidden;}
-        .untitledBluePNG {background-image:url(Untitled.png);}
-        .gospelHeartPNG{background-image:url(the-gospel-is-the-good-news.png);} /* IE10 */
-        .crossJesusPNG{background-image:url(jesus-on-cross-transparent.png);} /* IE10 */
-        .coinPNG{background-image:url(coin.png);} /* IE10 */
-  
-        .col-sm-alone>div{background-image:none;} /* This line of code is always inlined. */
-    }
-  
-    @media (min-width:992px) and (max-width:1426px){
-      
-  
-    .imgCaption {
-      height: 1px; 
-      visibility: hidden;
-    }
-        .imgrect>img {visibility: hidden;}
-        .untitledBluePNG {background-image:url(Untitled.png);}
-        .gospelHeartPNG{background-image:url(the-gospel-is-the-good-news.png);} /* IE10 */
-        .crossJesusPNG{background-image:url(jesus-on-cross-transparent.png);} /* IE10 */
-        .coinPNG{background-image:url(coin.png);} /* IE10 */
-  
-        .col-md-alone>div{background-image:none;} /* This line of code is always inlined. */
-    }
-  
-    @media (min-width:1427px){
-      
-  
-    .imgCaption {
-      height: 1px; 
-      visibility: hidden;
-    }
-        .imgrect>img {visibility: hidden;}
-        .untitledBluePNG {background-image:url(Untitled.png);}
-        .gospelHeartPNG{background-image:url(the-gospel-is-the-good-news.png);} /* IE10 */
-        .crossJesusPNG{background-image:url(jesus-on-cross-transparent.png);} /* IE10 */
-        .coinPNG{background-image:url(coin.png);} /* IE10 */
-  
-        .col-lg-alone>div{background-image:none;} /* This line of code is always inlined. */
-    }
-
-
-
-
-</style><![endif]-->
-
-
-</body>
-
-</html>
-
-
-
 
 </body>
 

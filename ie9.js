@@ -45,16 +45,6 @@ $( document ).ready(function() {
   };
   
       
-  var $imgrectEls = $( '.imgrect' );
-    
-    $imgrectEls.imgContainRect({
-      
-      overrideImgPut: function($container, $img) {
-        $container.empty();
-        $container.append($img);
-      }
-  
-    });
       
       
       
@@ -83,17 +73,6 @@ $( document ).ready(function() {
   
   };
   
-      
-  var $imgrectEls = $( '.imgrect' );
-
-    $imgrectEls.imgContainRect({
-      
-      overrideImgPut: function($container, $img) {
-        $container.empty();
-        $container.append($img);
-      }
-  
-    });
       
       
       
@@ -141,13 +120,17 @@ $( document ).ready(function() {
   
   
     setInterval(function(){
+
+      $('.imgrectCaption').each(function(){
+        $(this).css('background-image', $(this).closest('.imageCaptionRowAbove').css('background-image'));
+        $(this).closest('.imageCaptionRowAbove').css('background-size', '0');
+      });
       $('.imgrectCaption').find( '.imgrectCaptionChild>img' ).hide();
       $('.imgCaptionRowAbove').hide();
       $( '.imgrectCaption' ).find( '.imgrectCaptionChild' ).hide();
 
       $( '.imgrect' ).css( "position", "relative" );
       $( '.imgrect' ).css( "overflow", "visible" );
-      $imgrectEls.refreshImgContainRect();
 
 
       if($("img.afterIMGRECTonly").length==0) {
@@ -157,7 +140,7 @@ $( document ).ready(function() {
   
               var onWidthChange = _.once(function() {
   
-  
+                $( '.imgrect' ).css('height','auto');
   
                 /* removes added linebreak classes */
                 $("div[class*='lineBreakSection-']").each(function () {
@@ -269,8 +252,10 @@ $( document ).ready(function() {
         var onWidthChangeCaptions = _.once(function() {
           $( '.imageCaptionContainer' ).each(function(){
             
-
-
+            $('.imgrectCaption').find( '.imgrectCaptionChild>img' ).hide();
+            $('.imgCaptionRowAbove').hide();
+            $( '.imgrectCaption' ).find( '.imgrectCaptionChild' ).hide();
+            $( '.imgrectCaption' ).hide();
             $( this ).find( '.imgrectCaptionChild' ).css('height', $( this ).find('.imgrectCaptionRowAbove').outerHeight());
 
             var nWidth = $( this ).find('.imgrectCaption').find( '.imgCaption' ).naturalWidth();
@@ -283,15 +268,16 @@ $( document ).ready(function() {
             var containerRatio = containerHeight/containerWidth;
 
             if ( ( imgRatio > containerRatio ) && (( (widthCheck > 5 && widthCheck < 13) && (!$(this).find('.imgrectCaptionChild').hasClass('col-xs-alone') ) ) || ( (widthCheck > 14 && widthCheck < 24) && (!$(this).find('.imgrectCaptionChild').hasClass('col-sm-alone') ) ) || ( (widthCheck > 25 && widthCheck < 35) && (!$(this).find('.imgrectCaptionChild').hasClass('col-md-alone') ) ) || ( (widthCheck > 36 && widthCheck < 45) && (!$(this).find('.imgrectCaptionChild').hasClass('col-lg-alone') ) ) )) {
-              $( this ).find('.imgrectCaption').find( '.imgrectCaptionChild>img' ).css('height', '100%');
-              $( this ).find('.imgrectCaption').find( '.imgrectCaptionChild>img' ).css('width', 'auto');
+              $( this ).find('.imgrectCaption').find( '.imgrectCaptionChild>img' ).css('height', '0').css('width', '0');
+              $(this).find( '.imgrectCaption' ).height($(this).find('.imageCaptionRowAbove').height());
             }
             if ( ( imgRatio < containerRatio ) && (( (widthCheck > 5 && widthCheck < 13) && (!$(this).find('.imgrectCaptionChild').hasClass('col-xs-alone') ) ) || ( (widthCheck > 14 && widthCheck < 24) && (!$(this).find('.imgrectCaptionChild').hasClass('col-sm-alone') ) ) || ( (widthCheck > 25 && widthCheck < 35) && (!$(this).find('.imgrectCaptionChild').hasClass('col-md-alone') ) ) || ( (widthCheck > 36 && widthCheck < 45) && (!$(this).find('.imgrectCaptionChild').hasClass('col-lg-alone') ) ) )) {
-              $( this ).find('.imgrectCaption').find( '.imgrectCaptionChild>img' ).css('height', 'auto');
-              $( this ).find('.imgrectCaption').find( '.imgrectCaptionChild>img' ).css('width', '100%');
+              $( this ).find('.imgrectCaption').find( '.imgrectCaptionChild>img' ).css('height', '0').css('width', '0');
+              $(this).find( '.imgrectCaption' ).height($(this).find('.imageCaptionRowAbove').height());
             }
                         /* When alone, the width should always be a % and height should be auto. */
                         if ( ( $(this).find('.imgrectCaptionChild').hasClass('col-xs-alone') && (widthCheck > 6 && widthCheck < 18) ) ) {
+                          
                           $(this).find('.imgrectCaptionChild>img.col-xs-12').css('width', '99.9%').css('height', 'auto');
                           $(this).find('.imgrectCaptionChild>img.col-xs-11').css('width', '88%').css('height', 'auto');
                           $(this).find('.imgrectCaptionChild>img.col-xs-10').css('width', '80%').css('height', 'auto');
@@ -304,9 +290,12 @@ $( document ).ready(function() {
                           $(this).find('.imgrectCaptionChild>img.col-xs-3').css('width', '24%').css('height', 'auto');
                           $(this).find('.imgrectCaptionChild>img.col-xs-2').css('width', '16%').css('height', 'auto');
                           $(this).find('.imgrectCaptionChild>img.col-xs-1').css('width', '8%').css('height', 'auto');
+                          $(this).find( '.imgrectCaption' ).css('height','100%').css('width','100%');
+
                         }
 
                         if ( ( $(this).find('.imgrectCaptionChild').hasClass('col-sm-alone') && (widthCheck > 18 && widthCheck < 28) ) ) {
+                          
                           $(this).find('.imgrectCaptionChild>img.col-sm-12').css('width', '99.9%').css('height', 'auto');
                           $(this).find('.imgrectCaptionChild>img.col-sm-11').css('width', '88%').css('height', 'auto');
                           $(this).find('.imgrectCaptionChild>img.col-sm-10').css('width', '80%').css('height', 'auto');
@@ -319,9 +308,12 @@ $( document ).ready(function() {
                           $(this).find('.imgrectCaptionChild>img.col-sm-3').css('width', '24%').css('height', 'auto');
                           $(this).find('.imgrectCaptionChild>img.col-sm-2').css('width', '16%').css('height', 'auto');
                           $(this).find('.imgrectCaptionChild>img.col-sm-1').css('width', '8%').css('height', 'auto');
+                          $(this).find( '.imgrectCaption' ).css('height','100%').css('width','100%');
+
                         }
 
                         if ( $(this).find('.imgrectCaptionChild').hasClass('col-md-alone') && (widthCheck > 28 && widthCheck < 38) ) {
+                          
                           $(this).find('.imgrectCaptionChild>img.col-md-12').css('width', '99.9%').css('height', 'auto');
                           $(this).find('.imgrectCaptionChild>img.col-md-11').css('width', '88%').css('height', 'auto');
                           $(this).find('.imgrectCaptionChild>img.col-md-10').css('width', '80%').css('height', 'auto');
@@ -334,9 +326,12 @@ $( document ).ready(function() {
                           $(this).find('.imgrectCaptionChild>img.col-md-3').css('width', '24%').css('height', 'auto');
                           $(this).find('.imgrectCaptionChild>img.col-md-2').css('width', '16%').css('height', 'auto');
                           $(this).find('.imgrectCaptionChild>img.col-md-1').css('width', '8%').css('height', 'auto');
+                          $(this).find( '.imgrectCaption' ).css('height','100%').css('width','100%');
+
                         }
 
                         if ( $(this).find('.imgrectCaptionChild').hasClass('col-lg-alone') && (widthCheck > 36 && widthCheck < 42) ) {
+
                           $(this).find('.imgrectCaptionChild>img.col-lg-12').css('width', '99.9%').css('height', 'auto');
                           $(this).find('.imgrectCaptionChild>img.col-lg-11').css('width', '88%').css('height', 'auto');
                           $(this).find('.imgrectCaptionChild>img.col-lg-10').css('width', '80%').css('height', 'auto');
@@ -349,10 +344,21 @@ $( document ).ready(function() {
                           $(this).find('.imgrectCaptionChild>img.col-lg-3').css('width', '24%').css('height', 'auto');
                           $(this).find('.imgrectCaptionChild>img.col-lg-2').css('width', '16%').css('height', 'auto');
                           $(this).find('.imgrectCaptionChild>img.col-lg-1').css('width', '8%').css('height', 'auto');
+                          $(this).find( '.imgrectCaption' ).css('height','100%').css('width','100%');
+
                         }
-            $( '.imgrectCaption' ).find( '.imgrectCaptionChild' ).show();
-            $('.imgrectCaption').find( '.imgrectCaptionChild>img' ).show();
-            $('.imgCaptionRowAbove').show();
+
+
+
+                        $( '.imgrectCaption' ).show();
+                          $(this).find('.imgrectCaption').css('height', $(this).find('.imgrectCaption').parent());
+                          
+                          $( '.imgrectCaption' ).find( '.imgrectCaptionChild' ).show();
+                          $( '.imgrectCaption' ).find( '.imgrectCaptionChild>img' ).show();
+                          $( '.imgCaptionRowAbove' ).show();
+
+
+
       
           });
         });
@@ -361,7 +367,7 @@ $( document ).ready(function() {
   
   
 
-
+        
 
 
 

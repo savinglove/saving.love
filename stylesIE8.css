@@ -2,6 +2,9 @@
   .widthCheck {
     height: 10px;
   }
+  .hidden-xs {
+    display: none;
+  }
   .imgrectCaptionChild {
     position: absolute;
   }
@@ -350,6 +353,9 @@
 }
 /* This will be the code for wider screens supporting one bar of top navbar */
 @media (min-width: 382px) and (max-width: 598px){
+  .hidden-xs {
+    display: none;
+  }
   .imgrectCaptionChild {
     position: absolute;
   }
@@ -976,6 +982,9 @@ This needs to be inline-styled for wider browser widths to work properly.
 
     
   @media (min-width : 599px) and (max-width: 991px) {
+    .hidden-sm {
+      display: none;
+    }
     .imgrectCaptionChild {
       position: absolute;
     }
@@ -989,7 +998,7 @@ This needs to be inline-styled for wider browser widths to work properly.
       height: 20px;
     }
     .col-sm-width100 { width: 100%;}
-    .span-h3-verses{padding-left: 49px;}
+    .span-h3-verses{padding-left: 0;}
     .vwLargerWindow-li {
       padding-left: 27px;
       padding-right: 0;
@@ -1002,6 +1011,9 @@ This needs to be inline-styled for wider browser widths to work properly.
   }
   
   @media (min-width: 992px) and (max-width: 1426px) {
+    .hidden-md {
+      display: none;
+    }
     .imgrectCaptionChild {
       position: absolute;
     }
@@ -1015,7 +1027,7 @@ This needs to be inline-styled for wider browser widths to work properly.
         height: 30px;
       }
       .col-md-width100 { width: 100%;}
-      .span-h3-verses{padding-left: 49px;}
+      .span-h3-verses{padding-left: 0;}
       .col-md-12 {
         width: 99.99%;
       }
@@ -1143,6 +1155,9 @@ This needs to be inline-styled for wider browser widths to work properly.
   
   
   @media (min-width: 1427px) {
+    .hidden-lg {
+      display: none;
+    }
     .imgrectCaptionChild {
       position: absolute;
     }
@@ -1155,7 +1170,7 @@ This needs to be inline-styled for wider browser widths to work properly.
       .widthCheck {
         height: 40px;
       }
-      .span-h3-verses{padding-left: 49px;}
+      .span-h3-verses{padding-left: 0;}
       .col-lg-12 {
         width: 99.99%;
       }
@@ -1273,8 +1288,6 @@ This needs to be inline-styled for wider browser widths to work properly.
       .vwLargerWindow-li {
         padding-left: 32px;
         background-image:url('data:image/gif;base64,R0lGODlhEQARAPMKAIKCggMDA42NjZeXlzExMU9PTx8fHwICAtfX1wAAAP///wAAAAAAAAAAAAAAAAAAACH5BAUAAAoALAAAAAARABEAQAROUEmFRDHBFIGmCkkojmTgVVe2dRNCkHBIIG4MzxJw2MkBSAUerBAUjgq5nc3nUQxet4FnoOQdpALjSGDQigxdb8KQFQuc1aV08owR1ooIADs=');
-      }
-      .vwLargerWindow-p {
       }
   }
 

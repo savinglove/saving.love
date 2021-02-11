@@ -3,7 +3,9 @@ $( document ).ready(function() {
 
 
 
-  $.ifixpng('blank.gif');
+
+
+  $.ifixpng('/blank.gif');
 
 
     /* jQuery plugin to only run code if selector finds an existing match */
@@ -59,7 +61,7 @@ $( document ).ready(function() {
         
         
     
-    window.onload = function() {
+
     
     
         
@@ -77,6 +79,7 @@ $( document ).ready(function() {
             $(".title").css("font-size","29px"),
             $(".subtitle").css("font-size","24px"),
             $(".pCaption").css("font-size","19px");
+            $('.paddingPush').css('padding-top', '199px').css('padding-bottom', '99px');
         }
     });
     
@@ -92,6 +95,7 @@ $( document ).ready(function() {
             $(".title").css("font-size","29px"),
             $(".subtitle").css("font-size","24px"),
             $(".pCaption").css("font-size","19px");
+            $('.paddingPush').css('padding-top', '149px').css('padding-bottom', '99px');
         }
     });
     
@@ -110,6 +114,7 @@ $( document ).ready(function() {
           supportVhVw.setVw(".pCaption", 1.717);
           supportVhVw.setVw(".title", 2.9);
           supportVhVw.setVw(".subtitle", 2.2);
+          $('.paddingPush').css('padding-top', '99px').css('padding-bottom', '99px');
           document.getElementById("ListItemsA1").style.width = "100%";
     
         }, 
@@ -128,6 +133,7 @@ $( document ).ready(function() {
         $(".vwLargerWindow-li").css("font-size","19px"),
         $(".title").css("font-size","37px"),
         $(".subtitle").css("font-size","32px"),
+        $('.paddingPush').css('padding-top', '99px').css('padding-bottom', '99px');
         document.getElementById("ListItemsA1").style.width = "100%",
         document.getElementById("firstHeaderListItems").style.left="0";
         
@@ -146,6 +152,7 @@ $( document ).ready(function() {
             $(".pCaption").css("font-size","19px"),
             $(".title").css("font-size","49px"),
             $(".subtitle").css("font-size","33px"),
+            $('.paddingPush').css('padding-top', '99px').css('padding-bottom', '99px');
             document.getElementById("firstHeaderListItems").style.left="0",
             document.getElementById("ListItemsA1").style.width = "100%";
           }
@@ -155,26 +162,7 @@ $( document ).ready(function() {
   
   
   
-    setInterval(function(){
 
-      var onWidthChange1 = _.once(function() {
-
-        $('.noIMGUTIL').remove();
-        $('.imgrect>img').remove();
-        $('.imgrectagain>img').remove();
-
-        $( '.imgrect, .imgrectagain' ).css( "position", "relative" );
-        $( '.imgrect, .imgrectagain' ).css( "overflow", "visible" );
-        
-        $imgrectEls.refreshImgContainRect();
-  
-        $( '.imgrect>img, .imgrectagain>img' ).css( "position", "static" );
-        $( '.imgrect>img, .imgrectagain>img' ).css( "display", "block" );
-        $( '.imgrect>img, .imgrectagain>img' ).css( "position", "absolute" );
-
-      });
-
-      onWidthChange1();
 
 
 
@@ -197,10 +185,6 @@ $( document ).ready(function() {
 
                 
   
-                var onWidthChangeBefore2 = _.once(function() {
-                  $('img').iunfixpng();
-                });
-                onWidthChangeBefore2();
 
 
 
@@ -328,8 +312,8 @@ $( document ).ready(function() {
 
 
                       $(this).find('.textCaptionRow, .textCaptionRow>div').height($(this).find('.pCaption'));
-                      $(this).find('.imgrectCaptionChild, .imgrectCaption, .imageCaptionRowAbove').css('width', '100%').height(($(this).closest('.actualContentCell').height()) - ($(this).find('.pCaption').height()));
-
+                      $(this).find('.imageCaptionRowAbove').css('width', '100%');
+                      $(this).find('.imgrectCaptionChild, .imgrectCaption, .imageCaptionRowAbove').height(($(this).closest('.actualContentCell').height()) - ($(this).find('.pCaption').height()));
                       $(this).find('.imgrectagain>img').css('top', 'auto').css('bottom', '0').css('position', 'absolute');
                       
                       var imageWidth = $(this).find('.imgrectagain>img').width();
@@ -339,83 +323,155 @@ $( document ).ready(function() {
 
                       var widthCheck = $( '.widthCheck' ).height();
 
+
+
+
+
+                      if ((widthCheck > 6 && widthCheck < 18) && (!$(this).find('.imgrectCaptionChild').hasClass('col-xs-alone'))) {
+                        $(this).find('.imgrectCaptionChild.ie-xs-12').css('width', '99.9%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-xs-11').css('width', '88%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-xs-10').css('width', '80%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-xs-9').css('width', '72%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-xs-8').css('width', '64%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-xs-7').css('width', '56%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-xs-6').css('width', '48%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-xs-5').css('width', '40%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-xs-4').css('width', '32%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-xs-3').css('width', '24%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-xs-2').css('width', '16%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-xs-1').css('width', '8%').css('height', 'auto'); 
+                      
+                      }
+                      if ((widthCheck > 18 && widthCheck < 28) && (!$(this).find('.imgrectCaptionChild').hasClass('col-sm-alone'))) {
+                        $(this).find('.imgrectCaptionChild.ie-sm-12').css('width', '99.9%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-sm-11').css('width', '88%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-sm-10').css('width', '80%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-sm-9').css('width', '72%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-sm-8').css('width', '64%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-sm-7').css('width', '56%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-sm-6').css('width', '48%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-sm-5').css('width', '40%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-sm-4').css('width', '32%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-sm-3').css('width', '24%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-sm-2').css('width', '16%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-sm-1').css('width', '8%').css('height', 'auto');
+                      
+                      }
+                      if ((widthCheck > 28 && widthCheck < 38) && (!$(this).find('.imgrectCaptionChild').hasClass('col-md-alone'))) {
+                        $(this).find('.imgrectCaptionChild.ie-md-12').css('width', '99.9%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-md-11').css('width', '88%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-md-10').css('width', '80%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-md-9').css('width', '72%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-md-8').css('width', '64%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-md-7').css('width', '56%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-md-6').css('width', '48%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-md-5').css('width', '40%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-md-4').css('width', '32%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-md-3').css('width', '24%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-md-2').css('width', '16%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-md-1').css('width', '8%').css('height', 'auto');
+                      
+                      }
+                      if ((widthCheck > 36 && widthCheck < 42) && (!$(this).find('.imgrectCaptionChild').hasClass('col-lg-alone'))) {
+                        $(this).find('.imgrectCaptionChild.ie-lg-12').css('width', '99.9%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-lg-11').css('width', '88%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-lg-10').css('width', '80%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-lg-9').css('width', '72%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-lg-8').css('width', '64%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-lg-7').css('width', '56%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-lg-6').css('width', '48%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-lg-5').css('width', '40%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-lg-4').css('width', '32%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-lg-3').css('width', '24%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-lg-2').css('width', '16%').css('height', 'auto');
+                        $(this).find('.imgrectCaptionChild.ie-lg-1').css('width', '8%').css('height', 'auto');
+                      
+                      }
+
+
+
+
+
+
+
+
+
+
+
+
+
                       if ( ( (widthCheck > 6) && (widthCheck < 13) ) && ($(this).find('.imgrectCaptionChild').hasClass('col-xs-alone')) ) {
 
-                        $(this).find('.imgrectCaptionChild.ie6-xs-1').parent().css('width', '8%');
-                        $(this).find('.imgrectCaptionChild.ie6-xs-2').parent().css('width', '16%');
-                        $(this).find('.imgrectCaptionChild.ie6-xs-3').parent().css('width', '24%');
-                        $(this).find('.imgrectCaptionChild.ie6-xs-4').parent().css('width', '32%');
-                        $(this).find('.imgrectCaptionChild.ie6-xs-5').parent().css('width', '40%');
-                        $(this).find('.imgrectCaptionChild.ie6-xs-6').parent().css('width', '48%');
-                        $(this).find('.imgrectCaptionChild.ie6-xs-7').parent().css('width', '56%');
-                        $(this).find('.imgrectCaptionChild.ie6-xs-8').parent().css('width', '64%');
-                        $(this).find('.imgrectCaptionChild.ie6-xs-9').parent().css('width', '72%');
-                        $(this).find('.imgrectCaptionChild.ie6-xs-10').parent().css('width', '80%');
-                        $(this).find('.imgrectCaptionChild.ie6-xs-11').parent().css('width', '88%');
-                        $(this).find('.imgrectCaptionChild.ie6-xs-12').parent().css('width', '99.9%');
+                        $(this).find('.imgrectCaptionChild.ie-xs-1').parent().css('width', '8%');
+                        $(this).find('.imgrectCaptionChild.ie-xs-1').parent().css('width', '8%');
+                        $(this).find('.imgrectCaptionChild.ie-xs-2').parent().css('width', '16%');
+                        $(this).find('.imgrectCaptionChild.ie-xs-3').parent().css('width', '24%');
+                        $(this).find('.imgrectCaptionChild.ie-xs-4').parent().css('width', '32%');
+                        $(this).find('.imgrectCaptionChild.ie-xs-5').parent().css('width', '40%');
+                        $(this).find('.imgrectCaptionChild.ie-xs-6').parent().css('width', '48%');
+                        $(this).find('.imgrectCaptionChild.ie-xs-7').parent().css('width', '56%');
+                        $(this).find('.imgrectCaptionChild.ie-xs-8').parent().css('width', '64%');
+                        $(this).find('.imgrectCaptionChild.ie-xs-9').parent().css('width', '72%');
+                        $(this).find('.imgrectCaptionChild.ie-xs-10').parent().css('width', '80%');
+                        $(this).find('.imgrectCaptionChild.ie-xs-11').parent().css('width', '88%');
+                        $(this).find('.imgrectCaptionChild.ie-xs-12').parent().css('width', '99.9%');
                         
-                        $(this).find('.imgrectCaptionChild.ie6-xs-12').css('width', '100%');
-                        
+                        $(this).find('.imgrectagain').find('img').css('width', '100%');
                         
                         
                       var containerWidth = $(this).find('.imgrectCaptionChild').width();
 
                       var neededHeight = imageRatio * containerWidth;
 
-                        $('.html').html(neededHeight);
+                  
 
 
-                        $(this).find('.imgrectCaptionChild').parent().css('height', neededHeight);
-                        $(this).find('.imgrectCaptionChild').css('height', $($(this).find('.imgrectCaptionChild').parent().height()));
+                        $(this).find('.imgrectCaptionChild, .imgrectCaption, .imageCaptionRowAbove').css('height', neededHeight);
                       }
 
                       if ( ( (widthCheck > 13) && (widthCheck < 28) ) && ($(this).find('.imgrectCaptionChild').hasClass('col-sm-alone')) ) {
 
-                        $(this).find('.imgrectCaptionChild.ie6-sm-1').parent().css('width', '8%');
-                        $(this).find('.imgrectCaptionChild.ie6-sm-2').parent().css('width', '16%');
-                        $(this).find('.imgrectCaptionChild.ie6-sm-3').parent().css('width', '24%');
-                        $(this).find('.imgrectCaptionChild.ie6-sm-4').parent().css('width', '32%');
-                        $(this).find('.imgrectCaptionChild.ie6-sm-5').parent().css('width', '40%');
-                        $(this).find('.imgrectCaptionChild.ie6-sm-6').parent().css('width', '48%');
-                        $(this).find('.imgrectCaptionChild.ie6-sm-7').parent().css('width', '56%');
-                        $(this).find('.imgrectCaptionChild.ie6-sm-8').parent().css('width', '64%');
-                        $(this).find('.imgrectCaptionChild.ie6-sm-9').parent().css('width', '72%');
-                        $(this).find('.imgrectCaptionChild.ie6-sm-10').parent().css('width', '80%');
-                        $(this).find('.imgrectCaptionChild.ie6-sm-11').parent().css('width', '88%');
-                        $(this).find('.imgrectCaptionChild.ie6-sm-12').parent().css('width', '99.9%');
+                        $(this).find('.imgrectCaptionChild.ie-sm-1').parent().css('width', '8%');
+                        $(this).find('.imgrectCaptionChild.ie-sm-2').parent().css('width', '16%');
+                        $(this).find('.imgrectCaptionChild.ie-sm-3').parent().css('width', '24%');
+                        $(this).find('.imgrectCaptionChild.ie-sm-4').parent().css('width', '32%');
+                        $(this).find('.imgrectCaptionChild.ie-sm-5').parent().css('width', '40%');
+                        $(this).find('.imgrectCaptionChild.ie-sm-6').parent().css('width', '48%');
+                        $(this).find('.imgrectCaptionChild.ie-sm-7').parent().css('width', '56%');
+                        $(this).find('.imgrectCaptionChild.ie-sm-8').parent().css('width', '64%');
+                        $(this).find('.imgrectCaptionChild.ie-sm-9').parent().css('width', '72%');
+                        $(this).find('.imgrectCaptionChild.ie-sm-10').parent().css('width', '80%');
+                        $(this).find('.imgrectCaptionChild.ie-sm-11').parent().css('width', '88%');
+                        $(this).find('.imgrectCaptionChild.ie-sm-12').parent().css('width', '99.9%');
                         
-                        $(this).find('.imgrectCaptionChild.ie6-sm-12').css('width', '100%');
-                        
+                        $(this).find('.imgrectagain').find('img').css('width', '100%');
                         
                         
                       var containerWidth = $(this).find('.imgrectCaptionChild').width();
 
                       var neededHeight = imageRatio * containerWidth;
 
-                        $('.html').html(neededHeight);
-
-
-                        $(this).find('.imgrectCaptionChild').parent().css('height', neededHeight);
-                        $(this).find('.imgrectCaptionChild').css('height', $($(this).find('.imgrectCaptionChild').parent().height()));
+                
+                        $(this).find('.imgrectCaptionChild, .imgrectCaption, .imageCaptionRowAbove').css('height', neededHeight);
 
 
                     }
                     if ( ( (widthCheck > 23) && (widthCheck < 38) ) && ($(this).find('.imgrectCaptionChild').hasClass('col-md-alone')) ) {
 
-                      $(this).find('.imgrectCaptionChild.ie6-md-1').parent().css('width', '8%');
-                      $(this).find('.imgrectCaptionChild.ie6-md-2').parent().css('width', '16%');
-                      $(this).find('.imgrectCaptionChild.ie6-md-3').parent().css('width', '24%');
-                      $(this).find('.imgrectCaptionChild.ie6-md-4').parent().css('width', '32%');
-                      $(this).find('.imgrectCaptionChild.ie6-md-5').parent().css('width', '40%');
-                      $(this).find('.imgrectCaptionChild.ie6-md-6').parent().css('width', '48%');
-                      $(this).find('.imgrectCaptionChild.ie6-md-7').parent().css('width', '56%');
-                      $(this).find('.imgrectCaptionChild.ie6-md-8').parent().css('width', '64%');
-                      $(this).find('.imgrectCaptionChild.ie6-md-9').parent().css('width', '72%');
-                      $(this).find('.imgrectCaptionChild.ie6-md-10').parent().css('width', '80%');
-                      $(this).find('.imgrectCaptionChild.ie6-md-11').parent().css('width', '88%');
-                      $(this).find('.imgrectCaptionChild.ie6-md-12').parent().css('width', '99.9%');
+                      $(this).find('.imgrectCaptionChild.ie-md-1').parent().css('width', '8%');
+                      $(this).find('.imgrectCaptionChild.ie-md-2').parent().css('width', '16%');
+                      $(this).find('.imgrectCaptionChild.ie-md-3').parent().css('width', '24%');
+                      $(this).find('.imgrectCaptionChild.ie-md-4').parent().css('width', '32%');
+                      $(this).find('.imgrectCaptionChild.ie-md-5').parent().css('width', '40%');
+                      $(this).find('.imgrectCaptionChild.ie-md-6').parent().css('width', '48%');
+                      $(this).find('.imgrectCaptionChild.ie-md-7').parent().css('width', '56%');
+                      $(this).find('.imgrectCaptionChild.ie-md-8').parent().css('width', '64%');
+                      $(this).find('.imgrectCaptionChild.ie-md-9').parent().css('width', '72%');
+                      $(this).find('.imgrectCaptionChild.ie-md-10').parent().css('width', '80%');
+                      $(this).find('.imgrectCaptionChild.ie-md-11').parent().css('width', '88%');
+                      $(this).find('.imgrectCaptionChild.ie-md-12').parent().css('width', '99.9%');
                       
-                      $(this).find('.imgrectCaptionChild.ie6-md-12').css('width', '100%');
+                      $(this).find('.imgrectagain').find('img').css('width', '100%');
                       
                       
                       
@@ -423,30 +479,28 @@ $( document ).ready(function() {
 
                     var neededHeight = imageRatio * containerWidth;
 
-                      $('.html').html(neededHeight);
 
 
-                      $(this).find('.imgrectCaptionChild').parent().css('height', neededHeight);
-                      $(this).find('.imgrectCaptionChild').css('height', $($(this).find('.imgrectCaptionChild').parent().height()));
+                      $(this).find('.imgrectCaptionChild, .imgrectCaption, .imageCaptionRowAbove').css('height', neededHeight);
 
 
                   }
                   if ( ( (widthCheck > 31) && (widthCheck < 50) ) && ($(this).find('.imgrectCaptionChild').hasClass('col-lg-alone')) ) {
 
-                    $(this).find('.imgrectCaptionChild.ie6-lg-1').parent().css('width', '8%');
-                    $(this).find('.imgrectCaptionChild.ie6-lg-2').parent().css('width', '16%');
-                    $(this).find('.imgrectCaptionChild.ie6-lg-3').parent().css('width', '24%');
-                    $(this).find('.imgrectCaptionChild.ie6-lg-4').parent().css('width', '32%');
-                    $(this).find('.imgrectCaptionChild.ie6-lg-5').parent().css('width', '40%');
-                    $(this).find('.imgrectCaptionChild.ie6-lg-6').parent().css('width', '48%');
-                    $(this).find('.imgrectCaptionChild.ie6-lg-7').parent().css('width', '56%');
-                    $(this).find('.imgrectCaptionChild.ie6-lg-8').parent().css('width', '64%');
-                    $(this).find('.imgrectCaptionChild.ie6-lg-9').parent().css('width', '72%');
-                    $(this).find('.imgrectCaptionChild.ie6-lg-10').parent().css('width', '80%');
-                    $(this).find('.imgrectCaptionChild.ie6-lg-11').parent().css('width', '88%');
-                    $(this).find('.imgrectCaptionChild.ie6-lg-12').parent().css('width', '99.9%');
+                    $(this).find('.imgrectCaptionChild.ie-lg-1').parent().css('width', '8%');
+                    $(this).find('.imgrectCaptionChild.ie-lg-2').parent().css('width', '16%');
+                    $(this).find('.imgrectCaptionChild.ie-lg-3').parent().css('width', '24%');
+                    $(this).find('.imgrectCaptionChild.ie-lg-4').parent().css('width', '32%');
+                    $(this).find('.imgrectCaptionChild.ie-lg-5').parent().css('width', '40%');
+                    $(this).find('.imgrectCaptionChild.ie-lg-6').parent().css('width', '48%');
+                    $(this).find('.imgrectCaptionChild.ie-lg-7').parent().css('width', '56%');
+                    $(this).find('.imgrectCaptionChild.ie-lg-8').parent().css('width', '64%');
+                    $(this).find('.imgrectCaptionChild.ie-lg-9').parent().css('width', '72%');
+                    $(this).find('.imgrectCaptionChild.ie-lg-10').parent().css('width', '80%');
+                    $(this).find('.imgrectCaptionChild.ie-lg-11').parent().css('width', '88%');
+                    $(this).find('.imgrectCaptionChild.ie-lg-12').parent().css('width', '99.9%');
                     
-                    $(this).find('.imgrectCaptionChild.ie6-lg-12').css('width', '100%');
+                    $(this).find('.imgrectagain').find('img').css('width', '100%');
                     
                     
                     
@@ -454,19 +508,19 @@ $( document ).ready(function() {
 
                   var neededHeight = imageRatio * containerWidth;
 
-                    $('.html').html(neededHeight);
+               
 
 
-                    $(this).find('.imgrectCaptionChild').parent().css('height', neededHeight);
-                    $(this).find('.imgrectCaptionChild').css('height', $($(this).find('.imgrectCaptionChild').parent().height()));
+                    $(this).find('.imgrectCaptionChild, .imgrectCaption, .imageCaptionRowAbove').css('height', neededHeight);
 
 
                 }
+                
+                $(this).find('.imageCaptionTBODY .imageCaptionRowAbove, .imgrectCaptionChild').height($(this).find('.imgrectCaptionChild>img'));
+                
                     });
                   });
                   onWidthChangeCaptions();
-    
-
     
     
     
@@ -544,15 +598,6 @@ $( document ).ready(function() {
                 onWidthChange7();
   
 
-                
-                var onWidthChangeBefore2 = _.once(function() {
-                  $('img').each(function(){
-                    $(this).ifixpng();
-                  });
-                });
-                onWidthChangeBefore2();
-                
-
                   var onWidthChangeLast = _.once(function() {
                     $("img.afterIMGRECTonly").height( 0 );
                     $("img.afterIMGRECTonly").each(function(){
@@ -568,9 +613,41 @@ $( document ).ready(function() {
                   
                 });
   
-          onWidthChange();
 
+                  onWidthChange();
+    
+    setInterval(function(){
+                      var onWidthChange1 = _.once(function() {
 
+        $('.noIMGUTIL').remove();
+        $('.imgrect>img').remove();
+        $('.imgrectagain>img').remove();
+
+        $( '.imgrect, .imgrectagain' ).css( "position", "relative" );
+        $( '.imgrect, .imgrectagain' ).css( "overflow", "visible" );
+        
+        $imgrectEls.refreshImgContainRect();
+  
+        $( '.imgrect>img, .imgrectagain>img' ).css( "position", "static" );
+        $( '.imgrect>img, .imgrectagain>img' ).css( "display", "block" );
+        $( '.imgrect>img, .imgrectagain>img' ).css( "position", "absolute" );
+
+      });
+
+      onWidthChange1();
+
+                var onWidthChangeBefore2 = _.once(function() {
+
+                  $('img').each(function(){
+                      $(this).ifixpng();
+                  });
+                  $('.imgrectagain>img').css('top', 'auto').css('bottom', '0').css('position', 'absolute');
+                });
+
+                onWidthChangeBefore2();
+                
+
+    }, 100);
 
 
           var myDebouncedFunction = _.debounce( function(event) {
@@ -585,8 +662,5 @@ $( document ).ready(function() {
 
 
 
-    }, 100);
-  
-  };
   
   });

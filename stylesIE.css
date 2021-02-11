@@ -1,3 +1,9 @@
+---
+
+---
+.vwLargerWindow-li {
+  background-image:url({{ base }}/typographyBullet-12px.gif); 
+}
 @media (max-width: 381px) {
   .widthCheck {
     height: 10px;
@@ -14,7 +20,7 @@
   }
   .secondHeaderDiv {
     height: 148px;
-    background-image: url(navbar.jpg);
+    background-image: url({{ base }}/navbar.jpg);
     z-index: 1;
     position: relative;
     margin-bottom: -50px;
@@ -216,7 +222,8 @@
     border-right: 1px solid black;
   }
   .paddingPush {
-    padding-top: 0;
+    padding-top: 149px;
+    padding-bottom: 49px;
   }
   .bottomDivFooter {
     border-top: 1px solid rgba(0,0,0,0);
@@ -239,7 +246,7 @@
   }
   .secondHeaderDiv {
     height: 99px;
-    background-image: url(navbar.jpg);
+    background-image: url({{ base }}/navbar.jpg);
     z-index: 1;
     position: relative;
     margin-bottom: -50px;
@@ -436,7 +443,7 @@
 }
 .secondHeaderDiv {
   height: 48px;
-  background-image: url(navbar.jpg);
+  background-image: url({{ base }}/navbar.jpg);
   z-index: 1;
   margin-bottom: auto;
 }
@@ -602,6 +609,7 @@ This needs to be inline-styled for wider browser widths to work properly.
 @media (min-width : 1px) and (max-width: 598px) {
 
   /* Grid CSS */
+  .hidden-xs {display:none;}
   .span-h3-verses{padding-left: 0;}
 
   .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11 {
@@ -725,16 +733,16 @@ This needs to be inline-styled for wider browser widths to work properly.
       padding-left: 27px;
       padding-right: 0;
       background-size:12px;
-      background-image:url(typographyBullet-12px.gif); 
     }
   }
     
   @media (min-width : 599px) and (max-width: 991px) {
+    .hidden-sm {display:none;}
   .widthCheck {
     height: 20px;
   }
       .col-sm-width100 { width: 97%;}
-      .span-h3-verses{padding-left: 49px;}
+      .span-h3-verses{padding-left: 0;}
       .col-sm-12 {
         width: 97%;
       }
@@ -852,16 +860,16 @@ This needs to be inline-styled for wider browser widths to work properly.
       .vwLargerWindow-li {
         background-size:12px;
         padding-left:27px;
-        background-image:url(typographyBullet-12px.gif); 
       }
   }
   
   @media (min-width: 992px) and (max-width: 1426px) {
+    .hidden-md {display:none;}
     .widthCheck {
     height: 30px;
   }
       .col-md-width100 { width: 97%;}
-      .span-h3-verses{padding-left: 49px;}
+      .span-h3-verses{padding-left: 0;}
       .col-md-12 {
         width: 97%;
       }
@@ -980,7 +988,6 @@ This needs to be inline-styled for wider browser widths to work properly.
         background-size:12px;
         padding-left: 27px;
         padding-right: 0;
-        background-image:url(typographyBullet-12px.gif); 
       }
       .vwLargerWindow-p {
         padding-left: 19px;
@@ -990,12 +997,13 @@ This needs to be inline-styled for wider browser widths to work properly.
   
   
   @media (min-width: 1427px) {
+    .hidden-lg {display:none;}
   .widthCheck {
     height: 40px;
   }
       .col-lg-width100 {width: 97%;}
 
-      .span-h3-verses{padding-left: 49px;}
+      .span-h3-verses{padding-left: 0;}
 
       .col-lg-12 {
         width: 97%;
@@ -1112,9 +1120,8 @@ This needs to be inline-styled for wider browser widths to work properly.
         left: auto;
       }      
       .vwLargerWindow-li {
-        background-image:url(typographyBullet.gif);
+        background-image:url({{ base }}/typographyBullet.gif);
         padding-left: 32px;
         padding-right: 0;
       }
   }
-
