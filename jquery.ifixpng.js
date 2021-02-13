@@ -39,7 +39,7 @@
 	};
 	
 	$.ifixpng.getPixel = function() {
-		return $.ifixpng.pixel || 'http://saving.love/empty.gif';
+		return $.ifixpng.pixel || '/blank.gif';
 	};
 	
 	var hack = {

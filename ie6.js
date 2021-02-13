@@ -124,7 +124,7 @@ $( document ).ready(function() {
     });
     
     
-    enquire.register("(min-width : 599px) and (max-width: 991px)", {
+    enquire.register("(min-width : 599px) and (max-width: 736px)", {
       match : function() {
         // Init object
         $(window).off( "resize.mymethod" );
@@ -142,7 +142,7 @@ $( document ).ready(function() {
           
     
     
-        enquire.register("(min-width : 992px) and (max-width: 1426px)", {
+        enquire.register("(min-width : 737px) and (max-width: 1426px)", {
           match : function() {
             // Init object
             $(window).off( "resize.mymethod" ),
@@ -597,7 +597,7 @@ $( document ).ready(function() {
                 });
                 onWidthChange7();
   
-
+                setInterval(function(){
                   var onWidthChangeLast = _.once(function() {
                     $("img.afterIMGRECTonly").height( 0 );
                     $("img.afterIMGRECTonly").each(function(){
@@ -606,7 +606,7 @@ $( document ).ready(function() {
 
                   });
                   onWidthChangeLast();
-    
+                }, 100);
 
 
 

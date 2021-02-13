@@ -1,4 +1,25 @@
 @media (max-width: 381px) {
+  .normalTR>th.hidden-xs {
+    display: none;
+  }
+.normalTR>td.hidden-xs {
+    display: none;
+  }
+.normalTR>th {
+    font-size: 19px;
+}
+  .normalTR>td {
+    font-size: 17px;
+  }
+
+  TH.TH1-3 {
+    width: 100%;
+    border-right: none;
+  }
+  TD.TD1-3 {
+    width: 100%;
+    border-right: none;
+  }
   .widthCheck {
     height: 10px;
   }
@@ -353,6 +374,27 @@
 }
 /* This will be the code for wider screens supporting one bar of top navbar */
 @media (min-width: 382px) and (max-width: 598px){
+  .normalTR>th.hidden-xs {
+    display: none;
+  }
+.normalTR>td.hidden-xs {
+    display: none;
+  }
+.normalTR>th {
+    font-size: 19px;
+}
+  .normalTR>td {
+    font-size: 17px;
+  }
+
+  .TH1-3 {
+    width: 100%;
+    border-right: none;
+  }
+  .TD1-3 {
+    width: 100%;
+    border-right: none;
+  }
   .hidden-xs {
     display: none;
   }
@@ -694,7 +736,12 @@
 
 
 @media (min-width: 599px) {
-
+  .normalTR>th.hidden-sm {
+    display: none;
+  }
+  .normalTR>td.hidden-sm {
+    display: none;
+  }
   .col-sm-12 {
     width: 99.99%;
   }
@@ -981,7 +1028,32 @@ This needs to be inline-styled for wider browser widths to work properly.
 
 
     
-  @media (min-width : 599px) and (max-width: 991px) {
+  @media (min-width : 599px) and (max-width: 736px) {
+    
+  .normalTR>th {
+    font-size: 22px;
+  }
+  .normalTR>td {
+    font-size: 19px;
+  }
+  .TH1-3 {
+    width: 50%;
+  }
+  .TD1-3 {
+    width: 50%;
+  }
+  .TH2-3 {
+    width: 20%;
+  }
+  .TD2-3 {
+    width: 20%;
+  }
+  .TH3-3 {
+    width: 30%;
+  }
+  .TD3-3 {
+    width: 30%;
+  }
     .hidden-sm {
       display: none;
     }
@@ -1010,7 +1082,37 @@ This needs to be inline-styled for wider browser widths to work properly.
     }
   }
   
-  @media (min-width: 992px) and (max-width: 1426px) {
+  @media (min-width: 737px) and (max-width: 1426px) {
+    .normalTR>th.hidden-md {
+      display: none;
+    }
+    .normalTR>td.hidden-md {
+      display: none;
+    }
+    .normalTR>th {
+      font-size: 24px;
+    }
+    .normalTR>td {
+      font-size: 22px;
+    }
+    .TH1-3 {
+      width: 50%;
+    }
+    .TD1-3 {
+      width: 50%;
+    }
+    .TH2-3 {
+      width: 20%;
+    }
+    .TD2-3 {
+      width: 20%;
+    }
+    .TH3-3 {
+      width: 30%;
+    }
+    .TD3-3 {
+      width: 30%;
+    }
     .hidden-md {
       display: none;
     }
@@ -1155,6 +1257,36 @@ This needs to be inline-styled for wider browser widths to work properly.
   
   
   @media (min-width: 1427px) {
+    .normalTR>th {
+      font-size: 1.6vw;
+    }
+      .normalTR>td {
+      font-size: 1.4vw;
+    }
+      .normalTR>th.hidden-lg {
+        display: none;
+      }
+      .normalTR>td.hidden-lg {
+        display: none;
+      }
+      .TH1-3 {
+        width: 50%;
+      }
+      .TD1-3 {
+        width: 50%;
+      }
+      .TH2-3 {
+        width: 20%;
+      }
+      .TD2-3 {
+        width: 20%;
+      }
+      .TH3-3 {
+        width: 30%;
+      }
+      .TD3-3 {
+        width: 30%;
+      }
     .hidden-lg {
       display: none;
     }
