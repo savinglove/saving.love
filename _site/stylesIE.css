@@ -1,0 +1,1233 @@
+@media (max-width: 381px) {
+  .widthCheck {
+    height: 10px;
+  }
+  .col-xs-width100 { width: 97%;}
+  .firstHeaderDiv {
+    display: block; 
+    position: relative; 
+    width: 100%; 
+    height: 148px; 
+    left: 0; 
+    top: 0; 
+    border-bottom: 1px solid black;
+  }
+  .secondHeaderDiv {
+    height: 148px;
+    background-image: url(/navbar.jpg);
+    z-index: 1;
+    position: relative;
+    margin-bottom: -50px;
+    overflow: hidden;
+  }
+  .brandContainerParent {
+    position: relative;
+    left: auto;
+    height: auto;
+    overflow: auto;
+    text-align: center;
+  }
+  .brandContainer {
+    display: inline;
+    width: 190px;
+    height: auto;
+    position: relative;
+    overflow: visible;
+    left: 0;
+    margin-bottom: 0;
+    zoom: 1;
+  }
+  .brand {
+    display: inline; 
+    position: static; 
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    left: -50%;
+    float: none; 
+    overflow: visible;
+    font-size: 17px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center; 
+    zoom: 1;
+  }
+  .thirdHeaderDiv {
+    display: inline; 
+    position: absolute; 
+    width: 100%; 
+    height: auto; 
+    float: none; 
+    text-align: left; 
+    left: 0; 
+    bottom: auto;
+    z-index: 3;
+    zoom: 1;
+    top: auto;
+    margin-top: 0;
+    overflow: hidden;
+    height: auto;
+    border-bottom: none;
+  }
+  .firstHeaderList {
+    display: inline;
+    position: relative; 
+    float: none; 
+    width: 159px; 
+    height: auto; 
+    margin: 0; 
+    top: 0;
+    left: 50%;
+    zoom: 1;
+    text-align: center;
+    overflow: visible;
+    vertical-align: top;
+  }
+  .firstHeaderListItems {
+    display: inline; 
+    position: relative; 
+    border-top: none;
+    float: none;
+    overflow: visible;
+    padding: 0;
+    width: 159px; 
+    height: auto; 
+    left: -50%;
+    text-align: center; 
+    zoom: 1;
+  }
+  .secondHeaderListA {
+    display: inline; 
+    clear: both;
+    overflow: visible;
+    list-style: none; 
+    position: relative; 
+    float: left; 
+    width: 100%; 
+    height: auto; 
+    margin: 0; 
+    text-align: center; 
+    left: 50%; 
+    zoom: 1;
+  }
+  .secondHeaderListB {
+    display: inline; 
+    list-style: none;
+    position: relative; 
+    float: left; 
+    width: 100%; 
+    height: auto; 
+    left: 50%;
+    margin: 0; 
+    text-align: right; 
+    right: auto; 
+    clear: both;
+    zoom: 1;
+  }
+  .listItemsA1 {
+  /*
+  Some code needs to be inline-styled for wider browser widths to work properly.
+  */
+  }
+  .listItemsB1 {
+    display: inline; 
+    position: relative; 
+    clear: both;
+    float: left; 
+    width: 100%; 
+    height: 33px; 
+    text-align: center; 
+    zoom: 1;
+  }
+  .listItemsB2 {
+    display: inline; 
+    position: relative; 
+    overflow: visible;
+    clear: both;
+    float: left; 
+    width: 100%; 
+    height: 33px; 
+    text-align: center; 
+    zoom: 1;
+  }
+  .firstHeaderLinkPrint {
+    display: inline; 
+    position: relative; 
+    overflow: visible;
+    float: none; 
+    padding-top: 0;
+    padding-bottom: 0; 
+    padding-left: 0; 
+    padding-right: 0; 
+    font-size: 17px;
+    width: 100%; 
+    height: 32px; 
+    left: -50%;
+    line-height: 32px;
+    text-align: center; 
+    zoom: 1;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  .secondHeaderLinkHome {
+    display: inline; 
+    position: relative; 
+    float: left; 
+    clear: both;
+    left: -50%;
+    padding-top: 0;
+    padding-bottom: 0; 
+    padding-left: 0; 
+    padding-right: 0; 
+    font-size: 17px;
+    width: 100%; 
+    height: 32px;
+    line-height: 32px;
+    text-align: center; 
+    zoom: 1;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+  .thirdHeaderLinkMore {
+    display: inline; 
+    position: relative; 
+    float: left; 
+    overflow: visible;
+    clear: both;
+    left: -50%;
+    padding-top: 0;
+    padding-bottom: 0; 
+    padding-left: 0; 
+    padding-right: 0; 
+    font-size: 17px;
+    width: 100%; 
+    height: 33px;
+    line-height: 33px;
+    text-align: center; 
+    zoom: 1;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+  .paddingPush {
+    padding-top: 149px;
+    padding-bottom: 49px;
+  }
+  .bottomDivFooter {
+    border-top: 1px solid rgba(0,0,0,0);
+  }
+}
+
+@media (min-width: 382px) and (max-width: 598px){
+  .widthCheck {
+    height: 10px;
+  }
+  .col-xs-width100 { width: 97%;}
+  .firstHeaderDiv {
+    display: block; 
+    position: relative; 
+    width: 100%; 
+    height: 48px; 
+    left: 0; 
+    top: 0; 
+    border-bottom: none;
+  }
+  .secondHeaderDiv {
+    height: 99px;
+    background-image: url(/navbar.jpg);
+    z-index: 1;
+    position: relative;
+    margin-bottom: -50px;
+    overflow: auto;
+  }
+  .brandContainerParent {
+    position: relative;
+    left: auto;
+    height: 48px;
+    text-align: center;
+  }
+  .brandContainer {
+    display: inline;
+    height: 48px;
+    position: relative;
+    overflow: hidden;
+    left: auto;
+    margin-bottom: 0;
+    zoom: 1;
+  }
+  .brand {
+    display: inline; 
+    position: static; 
+    height: 48px;
+    left: -50%;
+    float: none; 
+    font-size: 17px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding-top: 15px;
+    padding-bottom: 14px;
+    padding-left: 14px;
+    padding-right: 14px;
+    text-align: center; 
+    zoom: 1;
+  }
+  .thirdHeaderDiv {
+    display: inline; 
+    position: absolute; 
+    width: 100%; 
+    height: 0px; 
+    float: none; 
+    text-align: left; 
+    left: 0; 
+    bottom: auto;
+    z-index: 3;
+    zoom: 1;
+    top: auto;
+    margin-top: auto;
+    overflow: hidden;
+    height: 48px;
+    border-bottom: 1px solid black;
+  }
+  .firstHeaderList {
+    display: inline;
+    position: relative; 
+    float: none; 
+    width: auto; 
+    height: 48px; 
+    margin: 0; 
+    left: 50%;
+    zoom: 1;
+    text-align: center;
+  }
+  .firstHeaderListItems {
+    display: inline; 
+    position: relative; 
+    border-top: 1px solid black;
+    float: none;
+    overflow: hidden;
+    width: auto; 
+    height: 48px;
+    text-align: center; 
+    left: auto; 
+    zoom: 1;
+  }
+  .secondHeaderListA {
+    display: inline; 
+    list-style: none; 
+    position: static; 
+    clear: none;
+    float: left; 
+    width: auto; 
+    height: 48px; 
+    margin: 0; 
+    text-align: center; 
+    left: auto; 
+    zoom: 1;
+  }
+  .secondHeaderListB {
+    display: inline; 
+    list-style: none;
+    position: static; 
+    float: left; 
+    width: auto; 
+    height: 48px; 
+    margin: 0; 
+    text-align: right; 
+    right: auto; 
+    zoom: 1;
+  }
+  .listItemsA1 {
+  /*
+  Some code needs to be inline-styled for wider browser widths to work properly.
+  */
+        
+  left: auto;        
+        
+  }
+  .listItemsB1 {
+    display: inline; 
+    position: relative; 
+    float: left; 
+    width: auto; 
+    height: 48px; 
+    text-align: center; 
+    zoom: 1;
+  }
+  .listItemsB2 {
+    display: inline; 
+    position: relative; 
+    float: left; 
+    width: auto; 
+    height: 48px; 
+    text-align: center; 
+    zoom: 1;
+  }
+  .firstHeaderLinkPrint {
+    display: inline; 
+    position: static; 
+    float: none; 
+    padding-top: 14px;
+    padding-bottom: 14px; 
+    padding-left: 15px; 
+    padding-right: 15px; 
+    font-size: 17px;
+    width: auto; 
+    height: 48px; 
+    left: auto;
+    text-align: center; 
+    zoom: 1;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+  }
+  .secondHeaderLinkHome {
+    display: inline; 
+    position: static; 
+    float: left; 
+    padding-top: 14px;
+    padding-bottom: 14px; 
+    padding-left: 15px; 
+    padding-right: 15px; 
+    font-size: 17px;
+    width: auto; 
+    height: 48px;
+    text-align: center; 
+    zoom: 1;
+    border-right: 1px solid black;
+  }
+  .thirdHeaderLinkMore {
+    display: inline; 
+    position: static; 
+    float: left; 
+    padding-top: 14px;
+    padding-bottom: 14px; 
+    padding-left: 15px; 
+    padding-right: 15px; 
+    font-size: 17px;
+    width: auto; 
+    height: 48px;
+    text-align: center; 
+    zoom: 1;
+    border-right: 1px solid black;
+  }
+  .bottomDivFooter {
+    border-top: 1px solid rgba(0,0,0,0);
+  }
+}
+
+
+
+
+
+
+@media (min-width: 599px) {
+
+.firstHeaderDiv {
+  display: block; 
+  position: absolute; 
+  width: 100%; 
+  height: 48px; 
+  left: 0; 
+  top: 0; 
+}
+.secondHeaderDiv {
+  height: 48px;
+  background-image: url(/navbar.jpg);
+  z-index: 1;
+  margin-bottom: auto;
+}
+
+
+.brandContainerParent {
+height: 0px;
+left: auto;
+position: static;
+}
+.brandContainer {
+left: auto;
+position: static;
+}
+
+
+.brand {
+  display: inline; 
+  position: absolute; 
+  border-right: 1px solid black;
+  height: 48px;
+  line-height: 48px;
+  float: none; 
+  font-size: 17px;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left; 
+  zoom: 1;
+}
+
+.thirdHeaderDiv {
+  display: inline; 
+  position: absolute; 
+  border-bottom: 1px solid black;
+  width: 100%; 
+  height: 48px; 
+  float: none; 
+  text-align: left; 
+  left: 0;
+  z-index: 3;
+  zoom: 1;
+  top: auto;
+  margin-top: auto;
+  overflow: auto;
+}
+.firstHeaderList {
+  display: inline;
+  position: absolute; 
+  float: none; 
+  width: 100%; 
+  height: 48px; 
+  text-align: center;
+  margin: 0; 
+  zoom: 1;
+  border-top: none;
+}
+.firstHeaderListItems {
+  display: inline; 
+  position: absolute; 
+  float: none; 
+  overflow: hidden;
+  width: 100%; 
+  height: 48px; 
+  text-align: center; 
+  left: 0; 
+  zoom: 1;
+}
+.secondHeaderListA {
+  display: inline; 
+  list-style: none; 
+  position: absolute; 
+  float: right; 
+  width: auto; 
+  height: 48px; 
+  margin: 0; 
+  text-align: center; 
+  left: 50%; 
+  zoom: 1;
+}
+.secondHeaderListB {
+  display: inline; 
+  position: absolute; 
+  float: right; 
+  width: auto; 
+  height: 48px; 
+  margin: 0; 
+  text-align: right; 
+  right: 0; 
+  zoom: 1;
+}
+.listItemsA1 {
+/*
+This needs to be inline-styled for wider browser widths to work properly.
+*/
+}
+.listItemsB1 {
+  display: inline; 
+  position: static; 
+  float: left; 
+  width: auto; 
+  height: 48px; 
+  text-align: center; 
+  zoom: 1;
+}
+.listItemsB2 {
+  display: inline; 
+  position: static; 
+  float: left; 
+  width: auto; 
+  height: 48px; 
+  text-align: center; 
+  zoom: 1;
+}
+.firstHeaderLinkPrint {
+  display: inline; 
+  position: relative; 
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  float: none; 
+  padding: 14px; 
+  font-size: 17px;
+  width: auto; 
+  height: 48px; 
+  left: -50%;
+  text-align: center; 
+  zoom: 1;
+}
+.secondHeaderLinkHome {
+  display: inline; 
+  position: static; 
+  border-left: 1px solid black;
+  float: left; 
+  padding: 14px; 
+  font-size: 17px;
+  width: auto; 
+  height: 48px;
+  text-align: center; 
+  zoom: 1;
+}
+.thirdHeaderLinkMore {
+  display: inline; 
+  position: static; 
+  border-left: 1px solid black;
+  float: left; 
+  padding: 14px; 
+  font-size: 17px;
+  width: auto; 
+  height: 48px;
+  text-align: center; 
+  zoom: 1;
+}
+.bottomDivFooter {
+  border-top: 1px solid black;
+}
+
+}
+
+
+
+
+@media (min-width : 1px) and (max-width: 598px) {
+  .normalTR>th.hidden-xs {
+    display: none;
+  }
+.normalTR>td.hidden-xs {
+    display: none;
+  }
+.normalTR>th {
+    font-size: 19px;
+}
+  .normalTR>td {
+    font-size: 17px;
+  }
+
+  TH.TH1-3 {
+    width: 100%;
+    border-right: none;
+  }
+  TD.TD1-3 {
+    width: 100%;
+    border-right: none;
+  }
+
+
+  /* Grid CSS */
+  .hidden-xs {display:none;}
+  .span-h3-verses{padding-left: 0;}
+
+  .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11 {
+      position: relative;
+    }
+    .col-xs-12 {
+      position: relative;
+      left: 0;
+      right: auto;
+      width: 97%;
+    }
+    .col-xs-11 {
+      width: 88%;
+    }
+    .col-xs-10 {
+      width: 80%;
+    }
+    .col-xs-9 {
+      width: 72%;
+    }
+    .col-xs-8 {
+      width: 64%;
+    }
+    .col-xs-7 {
+      width: 56%;
+    }
+    .col-xs-6 {
+      width: 48%;
+    }
+    .col-xs-5 {
+      width: 40%;
+    }
+    .col-xs-4 {
+      width: 30%;
+    }
+    .col-xs-3 {
+      width: 24%;
+    }
+    .col-xs-2 {
+      width: 16%;
+    }
+    .col-xs-1 {
+      width: 8%;
+    }
+    .col-xs-pull-12 {
+      right: 97%;
+    }
+    .col-xs-pull-11 {
+      right: 88%;
+    }
+    .col-xs-pull-10 {
+      right: 80%;
+    }
+    .col-xs-pull-9 {
+      right: 72%;
+    }
+    .col-xs-pull-8 {
+      right: 64%;
+    }
+    .col-xs-pull-7 {
+      right: 56%;
+    }
+    .col-xs-pull-6 {
+      right: 48%;
+    }
+    .col-xs-pull-5 {
+      right: 40%;
+    }
+    .col-xs-pull-4 {
+      right: 30%;
+    }
+    .col-xs-pull-3 {
+      right: 24%;
+    }
+    .col-xs-pull-2 {
+      right: 16%;
+    }
+    .col-xs-pull-1 {
+      right: 8%;
+    }
+    .col-xs-pull-0 {
+      right: auto;
+    }
+    .col-xs-push-12 {
+      left: 97%;
+    }
+    .col-xs-push-11 {
+      left: 88%;
+    }
+    .col-xs-push-10 {
+      left: 80%;
+    }
+    .col-xs-push-9 {
+      left: 72%;
+    }
+    .col-xs-push-8 {
+      left: 64%;
+    }
+    .col-xs-push-7 {
+      left: 56%;
+    }
+    .col-xs-push-6 {
+      left: 48%;
+    }
+    .col-xs-push-5 {
+      left: 40%;
+    }
+    .col-xs-push-4 {
+      left: 30%;
+    }
+    .col-xs-push-3 {
+      left: 24%;
+    }
+    .col-xs-push-2 {
+      left: 16%;
+    }
+    .col-xs-push-1 {
+      left: 8%;
+    }
+    .vwLargerWindow-li {
+      padding-left: 27px;
+      padding-right: 0;
+      background-size:12px;
+    }
+  }
+    
+  @media (min-width : 599px) and (max-width: 736px) {
+    .normalTR>th.hidden-sm {
+      display: none;
+    }
+    .normalTR>td.hidden-sm {
+      display: none;
+    }
+    .normalTR>th {
+      font-size: 22px;
+    }
+    .normalTR>td {
+      font-size: 19px;
+    }
+    .TH1-3 {
+      width: 50%;
+    }
+    .TD1-3 {
+      width: 50%;
+    }
+    .TH2-3 {
+      width: 20%;
+    }
+    .TD2-3 {
+      width: 20%;
+    }
+    .TH3-3 {
+      width: 30%;
+    }
+    .TD3-3 {
+      width: 30%;
+    }
+    .hidden-sm {display:none;}
+  .widthCheck {
+    height: 20px;
+  }
+      .col-sm-width100 { width: 97%;}
+      .span-h3-verses{padding-left: 0;}
+      .col-sm-12 {
+        width: 97%;
+      }
+      .col-sm-11 {
+        width: 88%;
+      }
+      .col-sm-10 {
+        width: 80%;
+      }
+      .col-sm-9 {
+        width: 72%;
+      }
+      .col-sm-8 {
+        width: 64%;
+      }
+      .col-sm-7 {
+        width: 56%;
+      }
+      .col-sm-6 {
+        width: 48%;
+      }
+      .col-sm-5 {
+        width: 40%;
+      }
+      .col-sm-4 {
+        width: 30%;
+      }
+      .col-sm-3 {
+        width: 24%;
+      }
+      .col-sm-2 {
+        width: 16%;
+      }
+      .col-sm-1 {
+        width: 8%;
+      }
+      .col-sm-pull-12 {
+        right: 97%;
+      }
+      .col-sm-pull-11 {
+        right: 88%;
+      }
+      .col-sm-pull-10 {
+        right: 80%;
+      }
+      .col-sm-pull-9 {
+        right: 72%;
+      }
+      .col-sm-pull-8 {
+        right: 64%;
+      }
+      .col-sm-pull-7 {
+        right: 56%;
+      }
+      .col-sm-pull-6 {
+        right: 48%;
+      }
+      .col-sm-pull-5 {
+        right: 40%;
+      }
+      .col-sm-pull-4 {
+        right: 30%;
+      }
+      .col-sm-pull-3 {
+        right: 24%;
+      }
+      .col-sm-pull-2 {
+        right: 16%;
+      }
+      .col-sm-pull-1 {
+        right: 8%;
+      }
+      .col-sm-pull-0 {
+        right: auto;
+      }
+      .col-sm-push-12 {
+        left: 97%;
+      }
+      .col-sm-push-11 {
+        left: 88%;
+      }
+      .col-sm-push-10 {
+        left: 80%;
+      }
+      .col-sm-push-9 {
+        left: 72%;
+      }
+      .col-sm-push-8 {
+        left: 64%;
+      }
+      .col-sm-push-7 {
+        left: 56%;
+      }
+      .col-sm-push-6 {
+        left: 48%;
+      }
+      .col-sm-push-5 {
+        left: 40%;
+      }
+      .col-sm-push-4 {
+        left: 30%;
+      }
+      .col-sm-push-3 {
+        left: 24%;
+      }
+      .col-sm-push-2 {
+        left: 16%;
+      }
+      .col-sm-push-1 {
+        left: 8%;
+      }
+      .col-sm-push-0 {
+        left: auto;
+      }
+      .vwLargerWindow-li {
+        background-size:12px;
+        padding-left:27px;
+      }
+  }
+  
+  @media (min-width: 737px) and (max-width: 1426px) {
+    .normalTR>th.hidden-md {
+      display: none;
+    }
+    .normalTR>td.hidden-md {
+      display: none;
+    }
+    .normalTR>th {
+      font-size: 24px;
+    }
+    .normalTR>td {
+      font-size: 22px;
+    }
+    .TH1-3 {
+      width: 50%;
+    }
+    .TD1-3 {
+      width: 50%;
+    }
+    .TH2-3 {
+      width: 20%;
+    }
+    .TD2-3 {
+      width: 20%;
+    }
+    .TH3-3 {
+      width: 30%;
+    }
+    .TD3-3 {
+      width: 30%;
+    }
+    .hidden-md {display:none;}
+    .widthCheck {
+    height: 30px;
+  }
+      .col-md-width100 { width: 97%;}
+      .span-h3-verses{padding-left: 0;}
+      .col-md-12 {
+        width: 97%;
+      }
+      .col-md-11 {
+        width: 88%;
+      }
+      .col-md-10 {
+        width: 80%;
+      }
+      .col-md-9 {
+        width: 72%;
+      }
+      .col-md-8 {
+        width: 64%;
+      }
+      .col-md-7 {
+        width: 56%;
+      }
+      .col-md-6 {
+        width: 48%;
+      }
+      .col-md-5 {
+        width: 40%;
+      }
+      .col-md-4 {
+        width: 30%;
+      }
+      .col-md-3 {
+        width: 24%;
+      }
+      .col-md-2 {
+        width: 16%;
+      }
+      .col-md-1 {
+        width: 8%;
+      }
+      .col-md-pull-12 {
+        right: 97%;
+      }
+      .col-md-pull-11 {
+        right: 88%;
+      }
+      .col-md-pull-10 {
+        right: 80%;
+      }
+      .col-md-pull-9 {
+        right: 72%;
+      }
+      .col-md-pull-8 {
+        right: 64%;
+      }
+      .col-md-pull-7 {
+        right: 56%;
+      }
+      .col-md-pull-6 {
+        right: 48%;
+      }
+      .col-md-pull-5 {
+        right: 40%;
+      }
+      .col-md-pull-4 {
+        right: 30%;
+      }
+      .col-md-pull-3 {
+        right: 24%;
+      }
+      .col-md-pull-2 {
+        right: 16%;
+      }
+      .col-md-pull-1 {
+        right: 8%;
+      }
+      .col-md-pull-0 {
+        right: auto;
+      }
+      .col-md-push-12 {
+        left: 97%;
+      }
+      .col-md-push-11 {
+        left: 88%;
+      }
+      .col-md-push-10 {
+        left: 80%;
+      }
+      .col-md-push-9 {
+        left: 72%;
+      }
+      .col-md-push-8 {
+        left: 64%;
+      }
+      .col-md-push-7 {
+        left: 56%;
+      }
+      .col-md-push-6 {
+        left: 48%;
+      }
+      .col-md-push-5 {
+        left: 40%;
+      }
+      .col-md-push-4 {
+        left: 30%;
+      }
+      .col-md-push-3 {
+        left: 24%;
+      }
+      .col-md-push-2 {
+        left: 16%;
+      }
+      .col-md-push-1 {
+        left: 8%;
+      }
+      .col-md-push-0 {
+        left: auto;
+      }
+      .vwLargerWindow-li {
+        background-size:12px;
+        padding-left: 27px;
+        padding-right: 0;
+      }
+      .vwLargerWindow-p {
+        padding-left: 19px;
+        padding-right: 19px;
+      }
+  }
+  
+  
+  @media (min-width: 1427px) {
+    .normalTR>th {
+      font-size: 1.6vw;
+    }
+      .normalTR>td {
+      font-size: 1.4vw;
+    }
+      .normalTR>th.hidden-lg {
+        display: none;
+      }
+      .normalTR>td.hidden-lg {
+        display: none;
+      }
+      .TH1-3 {
+        width: 50%;
+      }
+      .TD1-3 {
+        width: 50%;
+      }
+      .TH2-3 {
+        width: 20%;
+      }
+      .TD2-3 {
+        width: 20%;
+      }
+      .TH3-3 {
+        width: 30%;
+      }
+      .TD3-3 {
+        width: 30%;
+      }
+    .hidden-lg {display:none;}
+  .widthCheck {
+    height: 40px;
+  }
+      .col-lg-width100 {width: 97%;}
+
+      .span-h3-verses{padding-left: 0;}
+
+      .col-lg-12 {
+        width: 97%;
+      }
+      .col-lg-11 {
+        width: 88%;
+      }
+      .col-lg-10 {
+        width: 80%;
+      }
+      .col-lg-9 {
+        width: 72%;
+      }
+      .col-lg-8 {
+        width: 64%;
+      }
+      .col-lg-7 {
+        width: 56%;
+      }
+      .col-lg-6 {
+        width: 48%;
+      }
+      .col-lg-5 {
+        width: 40%;
+      }
+      .col-lg-4 {
+        width: 30%;
+      }
+      .col-lg-3 {
+        width: 24%;
+      }
+      .col-lg-2 {
+        width: 16%;
+      }
+      .col-lg-1 {
+        width: 8%;
+      }
+      .col-lg-pull-12 {
+        right: 97%;
+      }
+      .col-lg-pull-11 {
+        right: 88%;
+      }
+      .col-lg-pull-10 {
+        right: 80%;
+      }
+      .col-lg-pull-9 {
+        right: 72%;
+      }
+      .col-lg-pull-8 {
+        right: 64%;
+      }
+      .col-lg-pull-7 {
+        right: 56%;
+      }
+      .col-lg-pull-6 {
+        right: 48%;
+      }
+      .col-lg-pull-5 {
+        right: 40%;
+      }
+      .col-lg-pull-4 {
+        right: 30%;
+      }
+      .col-lg-pull-3 {
+        right: 24%;
+      }
+      .col-lg-pull-2 {
+        right: 16%;
+      }
+      .col-lg-pull-1 {
+        right: 8%;
+      }
+      .col-lg-pull-0 {
+        right: auto;
+      }
+      .col-lg-push-12 {
+        left: 97%;
+      }
+      .col-lg-push-11 {
+        left: 88%;
+      }
+      .col-lg-push-10 {
+        left: 80%;
+      }
+      .col-lg-push-9 {
+        left: 72%;
+      }
+      .col-lg-push-8 {
+        left: 64%;
+      }
+      .col-lg-push-7 {
+        left: 56%;
+      }
+      .col-lg-push-6 {
+        left: 48%;
+      }
+      .col-lg-push-5 {
+        left: 40%;
+      }
+      .col-lg-push-4 {
+        left: 30%;
+      }
+      .col-lg-push-3 {
+        left: 24%;
+      }
+      .col-lg-push-2 {
+        left: 16%;
+      }
+      .col-lg-push-1 {
+        left: 8%;
+      }
+      .col-lg-push-0 {
+        left: auto;
+      }      
+      .vwLargerWindow-li {
+        background-image:url(/typographyBullet.gif);
+        padding-left: 32px;
+        padding-right: 0;
+      }
+  }
