@@ -68,7 +68,7 @@ $( document ).ready(function() {
     
 
 
-    enquire.register("(min-width : 1px) and (max-width: 381px)", {
+    enquire.register("(min-width : 1px) and (max-width: 519px)", {
         match : function() {
             /* li elements (list stuff) can't have left adjusted without inline or js styling, not even jQuery will. */
             document.getElementById("firstHeaderListItems").style.left="-50%",
@@ -84,7 +84,7 @@ $( document ).ready(function() {
     });
     
     
-    enquire.register("(min-width : 382px) and (max-width: 598px)", {
+    enquire.register("(min-width : 520px) and (max-width: 730px)", {
         match : function() {
             /* li elements (list stuff) can't have left adjusted without inline or js styling, not even jQuery will. */
             document.getElementById("firstHeaderListItems").style.left="-50%",
@@ -124,7 +124,7 @@ $( document ).ready(function() {
     });
     
     
-    enquire.register("(min-width : 599px) and (max-width: 736px)", {
+    enquire.register("(min-width : 731px) and (max-width: 736px)", {
       match : function() {
         // Init object
         $(window).off( "resize.mymethod" );

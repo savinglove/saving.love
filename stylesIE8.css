@@ -1,4 +1,4 @@
-@media (max-width: 381px) {
+@media (max-width: 519px) {
   .normalTR>th.hidden-xs {
     display: none;
   }
@@ -373,7 +373,7 @@
   }
 }
 /* This will be the code for wider screens supporting one bar of top navbar */
-@media (min-width: 382px) and (max-width: 598px){
+@media (min-width: 520px) and (max-width: 730px){
   .normalTR>th.hidden-xs {
     display: none;
   }
@@ -735,7 +735,7 @@
 
 
 
-@media (min-width: 599px) {
+@media (min-width: 731px) {
   .normalTR>th.hidden-sm {
     display: none;
   }
@@ -1028,7 +1028,7 @@ This needs to be inline-styled for wider browser widths to work properly.
 
 
     
-  @media (min-width : 599px) and (max-width: 736px) {
+  @media (min-width : 731px) and (max-width: 736px) {
     
   .normalTR>th {
     font-size: 22px;

@@ -1,7 +1,7 @@
 ---
 
 ---
-@media (max-width: 381px) {
+@media (max-width: 519px) {
   .widthCheck {
     height: 10px;
   }
@@ -227,7 +227,7 @@
   }
 }
 
-@media (min-width: 382px) and (max-width: 598px){
+@media (min-width: 520px) and (max-width: 730px){
   .widthCheck {
     height: 10px;
   }
@@ -428,7 +428,7 @@
 
 
 
-@media (min-width: 599px) {
+@media (min-width: 731px) {
 
 .firstHeaderDiv {
   display: block; 
@@ -603,7 +603,7 @@ This needs to be inline-styled for wider browser widths to work properly.
 
 
 
-@media (min-width : 1px) and (max-width: 598px) {
+@media (min-width : 1px) and (max-width: 730px) {
   .normalTR>th.hidden-xs {
     display: none;
   }
