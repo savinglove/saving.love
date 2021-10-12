@@ -26,7 +26,7 @@ description: >-
       
 <!--- Displays Pages with a title, with a date, and with a last modified date. --->
       
-      {% assign topics_by_letter-one = site.pages | group_by: "date", "page.new-and-all-title" %}
+      {% assign topics_by_letter-one = site.pages | group_by_exp: "date", "page.new-and-all-title" %}
       {% assign topics_by_letter = topics_by_letter-one | sort: 'new-and-all-title' %}
       {% for page in topics_by_letter %}
           {% if page.layout != 'redirect' %}
@@ -43,7 +43,7 @@ description: >-
 
 <!--- Displays Pages with a title, with a date, but without a last modified date. --->
 
-      {% assign topics_by_letter-one = site.pages | group_by: "date", "page.new-and-all-title" %}
+      {% assign topics_by_letter-one = site.pages | group_by_exp: "date", "page.new-and-all-title" %}
       {% assign topics_by_letter = topics_by_letter-one | sort: 'new-and-all-title' %}
       {% for page in topics_by_letter %}
           {% if page.layout != 'redirect' %}
@@ -60,7 +60,7 @@ description: >-
 
 <!--- Displays Pages with a title, without a date... but WITH a last modified date. --->
 
-        {% assign topics_by_letter-one = site.pages | group_by: "lastmod", "page.new-and-all-title" %}
+        {% assign topics_by_letter-one = site.pages | group_by_exp: "lastmod", "page.new-and-all-title" %}
         {% assign topics_by_letter = topics_by_letter-one | sort: 'new-and-all-title' %}
         {% for page in topics_by_letter %}
           {% if page.layout != 'redirect' %}
