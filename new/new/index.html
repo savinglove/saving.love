@@ -1,0 +1,101 @@
+---
+layout: default
+active: more
+permalink: /new/
+new-and-all-title: New Pages (Sorted by Most Recent)
+title: New Pages on Saving.Love (Sorted by Most Recent)
+description: >-
+    The newest pages of Saving.Love sorted by what's most recently shared.
+---
+
+
+  <h1 class="title">New Pages</h1>
+  <h2 class="subtitle">Sorted by First Shared:</h2>
+  <div class="middleTableContentContainer">
+    <div class="middleTbodyContentContainer">
+      <div class="actualContentRow">
+
+
+        <div class="col-xs-36 col-sm-36 col-md-36 col-lg-36 actualContentCell">
+			    <table class="tftable">
+
+            <tr class="normalTR"><th class="normalTH TH1-3"><span class="vwLargerWindow-THorTD">Page</span></th><th class="hidden-xs normalTH TH2-3"><span class="vwLargerWindow-THorTD">First Shared</span></th><th class="hidden-xs normalTH TH3-3"><span class="vwLargerWindow-THorTD">Last Updated (Estimate)</span></th></tr>
+
+
+
+      
+<!--- Displays Pages with a title, with a date, and with a last modified date. --->
+      
+      {% assign topics_by_letter-one = site.pages | group_by_exp: "date", "page.new-and-all-title" %}
+      {% assign topics_by_letter = topics_by_letter-one | sort: 'new-and-all-title' %}
+      {% for page in topics_by_letter %}
+          {% if page.layout != 'redirect' %}
+            {% if page.new-and-all-title %}
+            {% if page.lastmod != nil %}
+                {% if page.date %}
+                <tr class="normalTR"><td class="inLastRow normalTD TD1-3"><a href="{{ base.url }}{{ page.url }}"><span class="vwLargerWindow-THorTD">{{ page.new-and-all-title }}</span></a></td><td class="inLastRow hidden-xs normalTD TD2-3"><span class="vwLargerWindow-THorTD">{% if page.date %}{{ page.date | date: "%m-%d-%Y" }}{% else %}Unknown{% endif %}</span></td><td class="inLastRow hidden-xs normalTD TD3-3"><span class="vwLargerWindow-THorTD">{% if page.sitemap.lastmod %}{{ page.sitemap.lastmod | date: "%m-%d-%Y" }}{% else %}Unkown{% endif %}</span></td></tr>
+                {% endif %}
+              {% endif %}
+            {% endif %}
+          {% endif %}
+      {% endfor %}
+
+
+<!--- Displays Pages with a title, with a date, but without a last modified date. --->
+
+      {% assign topics_by_letter-one = site.pages | group_by_exp: "date", "page.new-and-all-title" %}
+      {% assign topics_by_letter = topics_by_letter-one | sort: 'new-and-all-title' %}
+      {% for page in topics_by_letter %}
+          {% if page.layout != 'redirect' %}
+            {% if page.new-and-all-title %}
+            {% if page.lastmod == nil %}
+                {% if page.date %}
+                <tr class="normalTR"><td class="inLastRow normalTD TD1-3"><a href="{{ base.url }}{{ page.url }}"><span class="vwLargerWindow-THorTD">{{ page.new-and-all-title }}</span></a></td><td class="inLastRow hidden-xs normalTD TD2-3"><span class="vwLargerWindow-THorTD">{% if page.date %}{{ page.date | date: "%m-%d-%Y" }}{% else %}Unknown{% endif %}</span></td><td class="inLastRow hidden-xs normalTD TD3-3"><span class="vwLargerWindow-THorTD">{% if page.sitemap.lastmod %}{{ page.sitemap.lastmod | date: "%m-%d-%Y" }}{% else %}Unkown{% endif %}</span></td></tr>
+                {% endif %}
+              {% endif %}
+            {% endif %}
+          {% endif %}
+      {% endfor %}
+
+
+<!--- Displays Pages with a title, without a date... but WITH a last modified date. --->
+
+        {% assign topics_by_letter-one = site.pages | group_by_exp: "lastmod", "page.new-and-all-title" %}
+        {% assign topics_by_letter = topics_by_letter-one | sort: 'new-and-all-title' %}
+        {% for page in topics_by_letter %}
+          {% if page.layout != 'redirect' %}
+            {% if page.new-and-all-title %}
+              {% if page.lastmod != nil %}
+                {% unless page.date %}
+                <tr class="normalTR"><td class="inLastRow normalTD TD1-3"><a href="{{ base.url }}{{ page.url }}"><span class="vwLargerWindow-THorTD">{{ page.new-and-all-title }}</span></a></td><td class="inLastRow hidden-xs normalTD TD2-3"><span class="vwLargerWindow-THorTD">{% if page.date %}{{ page.date | date: "%m-%d-%Y" }}{% else %}Unknown{% endif %}</span></td><td class="inLastRow hidden-xs normalTD TD3-3"><span class="vwLargerWindow-THorTD">{% if page.sitemap.lastmod %}{{ page.sitemap.lastmod | date: "%m-%d-%Y" }}{% else %}Unkown{% endif %}</span></td></tr>
+                {% endunless %}
+              {% endif %}
+            {% endif %}
+          {% endif %}
+      {% endfor %}
+
+
+  <!--- Displays Pages with a title, without a date and without a last modified date. (Unkown and Unkown.) --->
+
+        {% assign sorted_by_title = site.pages | sort:'new-and-all-title' %}
+        {% for page in sorted_by_title %} 
+            {% if page.layout != 'redirect' %}
+              {% if page.new-and-all-title %}
+                {% if page.lastmod == nil %}
+                  {% unless page.date %}
+                  <tr class="normalTR"><td class="inLastRow normalTD TD1-3"><a href="{{ base.url }}{{ page.url }}"><span class="vwLargerWindow-THorTD">{{ page.new-and-all-title }}<span></a></td><td class="inLastRow hidden-xs normalTD TD2-3"><span class="vwLargerWindow-THorTD">{% if page.date %}{{ page.date | date: "%m-%d-%Y" }}{% else %}Unknown{% endif %}</span></td><td class="inLastRow hidden-xs normalTD TD3-3"><span class="vwLargerWindow-THorTD">{% if page.sitemap.lastmod %}{{ page.sitemap.lastmod | date: "%m-%d-%Y" }}{% else %}Unkown{% endif %}</span></td></tr>
+                  {% endunless %}
+                {% endif %}
+              {% endif %}
+            {% endif %}
+        {% endfor %}
+          </table>	
+        </div>
+        
+
+  {% include footerNav.html %}
+
+
+</body>
+
+</html>
