@@ -29,7 +29,6 @@ description: >-
       {% assign topics_by_letter-one = site.pages | group_by_exp: "date", "page.new-and-all-title" %}
       {% assign topics_by_letter = topics_by_letter-one | sort: 'new-and-all-title' %}
       {% for page in topics_by_letter %}
-        {% unless page.published == false %}
           {% if page.layout != 'redirect' %}
             {% if page.new-and-all-title %}
             {% if page.sitemap.lastmod != nil %}
@@ -39,7 +38,6 @@ description: >-
               {% endif %}
             {% endif %}
           {% endif %}
-        {% endunless %}
       {% endfor %}
 
 
@@ -48,7 +46,6 @@ description: >-
       {% assign topics_by_letter-one = site.pages | group_by_exp: "date", "page.new-and-all-title" %}
       {% assign topics_by_letter = topics_by_letter-one | sort: 'new-and-all-title' %}
       {% for page in topics_by_letter %}
-        {% unless page.published == false %}
           {% if page.layout != 'redirect' %}
             {% if page.new-and-all-title %}
             {% if page.sitemap.lastmod == nil %}
@@ -58,7 +55,6 @@ description: >-
               {% endif %}
             {% endif %}
           {% endif %}
-        {% endunless %}
       {% endfor %}
 
 
@@ -67,7 +63,6 @@ description: >-
         {% assign topics_by_letter-one = site.pages | group_by_exp: "lastmod", "page.new-and-all-title" %}
         {% assign topics_by_letter = topics_by_letter-one | sort: 'new-and-all-title' %}
         {% for page in topics_by_letter %}
-        {% unless page.published == false %}
           {% if page.layout != 'redirect' %}
             {% if page.new-and-all-title %}
               {% if page.sitemap.lastmod != nil %}
@@ -77,7 +72,6 @@ description: >-
               {% endif %}
             {% endif %}
           {% endif %}
-        {% endunless %}
       {% endfor %}
 
 
@@ -85,7 +79,6 @@ description: >-
 
         {% assign sorted_by_title = site.pages | sort:'new-and-all-title' %}
         {% for page in sorted_by_title %} 
-          {% unless page.published == false %}
             {% if page.layout != 'redirect' %}
               {% if page.new-and-all-title %}
                 {% if page.sitemap.lastmod == nil %}
@@ -95,7 +88,6 @@ description: >-
                 {% endif %}
               {% endif %}
             {% endif %}
-          {% endunless %}
         {% endfor %}
           </table>	
         </div>
