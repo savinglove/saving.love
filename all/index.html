@@ -27,7 +27,7 @@ description: >-
 
 
 
-    {% assign topics_by_letter-one = site.pages | group_by_exp: "date", "page.new-and-all-title" %}
+    {% assign topics_by_letter-one = site.pages | "page.new-and-all-title" %}
     {% assign topics_by_letter = topics_by_letter-one | sort: 'new-and-all-title' %}
     {% for page in topics_by_letter %}
       {% if page.layout != 'redirect' %}
