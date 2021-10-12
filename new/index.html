@@ -31,9 +31,9 @@ description: >-
       {% for page in topics_by_letter %}
           {% if page.layout != 'redirect' %}
             {% if page.new-and-all-title %}
-            {% if page.sitemap.lastmod != nil %}
+            {% if page.lastmod != nil %}
                 {% if page.date %}
-                <tr class="normalTR"><td class="inLastRow normalTD TD1-3"><a href="{{ base.url }}{{ page.url }}"><span class="vwLargerWindow-THorTD">{{ page.new-and-all-title }}</span></a></td><td class="inLastRow hidden-xs normalTD TD2-3"><span class="vwLargerWindow-THorTD">{% if page.date %}{{ page.date | date: "%m-%d-%Y" }}{% else %}Unknown{% endif %}</span></td><td class="inLastRow hidden-xs normalTD TD3-3"><span class="vwLargerWindow-THorTD">{% if page.sitemap.lastmod %}{{ page.sitemap.lastmod | date: "%m-%d-%Y" }}{% else %}Unkown{% endif %}</span></td></tr>
+                <tr class="normalTR"><td class="inLastRow normalTD TD1-3"><a href="{{ base.url }}{{ page.url }}"><span class="vwLargerWindow-THorTD">{{ page.new-and-all-title }}</span></a></td><td class="inLastRow hidden-xs normalTD TD2-3"><span class="vwLargerWindow-THorTD">{% if page.date %}{{ page.date | date: "%m-%d-%Y" }}{% else %}Unknown{% endif %}</span></td><td class="inLastRow hidden-xs normalTD TD3-3"><span class="vwLargerWindow-THorTD">{% if page.lastmod %}{{ page.lastmod | date: "%m-%d-%Y" }}{% else %}Unkown{% endif %}</span></td></tr>
                 {% endif %}
               {% endif %}
             {% endif %}
@@ -48,9 +48,9 @@ description: >-
       {% for page in topics_by_letter %}
           {% if page.layout != 'redirect' %}
             {% if page.new-and-all-title %}
-            {% if page.sitemap.lastmod == nil %}
+            {% if page.lastmod == nil %}
                 {% if page.date %}
-                <tr class="normalTR"><td class="inLastRow normalTD TD1-3"><a href="{{ base.url }}{{ page.url }}"><span class="vwLargerWindow-THorTD">{{ page.new-and-all-title }}</span></a></td><td class="inLastRow hidden-xs normalTD TD2-3"><span class="vwLargerWindow-THorTD">{% if page.date %}{{ page.date | date: "%m-%d-%Y" }}{% else %}Unknown{% endif %}</span></td><td class="inLastRow hidden-xs normalTD TD3-3"><span class="vwLargerWindow-THorTD">{% if page.sitemap.lastmod %}{{ page.sitemap.lastmod | date: "%m-%d-%Y" }}{% else %}Unkown{% endif %}</span></td></tr>
+                <tr class="normalTR"><td class="inLastRow normalTD TD1-3"><a href="{{ base.url }}{{ page.url }}"><span class="vwLargerWindow-THorTD">{{ page.new-and-all-title }}</span></a></td><td class="inLastRow hidden-xs normalTD TD2-3"><span class="vwLargerWindow-THorTD">{% if page.date %}{{ page.date | date: "%m-%d-%Y" }}{% else %}Unknown{% endif %}</span></td><td class="inLastRow hidden-xs normalTD TD3-3"><span class="vwLargerWindow-THorTD">{% if page.lastmod %}{{ page.lastmod | date: "%m-%d-%Y" }}{% else %}Unkown{% endif %}</span></td></tr>
                 {% endif %}
               {% endif %}
             {% endif %}
@@ -65,9 +65,9 @@ description: >-
         {% for page in topics_by_letter %}
           {% if page.layout != 'redirect' %}
             {% if page.new-and-all-title %}
-              {% if page.sitemap.lastmod != nil %}
+              {% if page.lastmod != nil %}
                 {% unless page.date %}
-                <tr class="normalTR"><td class="inLastRow normalTD TD1-3"><a href="{{ base.url }}{{ page.url }}"><span class="vwLargerWindow-THorTD">{{ page.new-and-all-title }}</span></a></td><td class="inLastRow hidden-xs normalTD TD2-3"><span class="vwLargerWindow-THorTD">{% if page.date %}{{ page.date | date: "%m-%d-%Y" }}{% else %}Unknown{% endif %}</span></td><td class="inLastRow hidden-xs normalTD TD3-3"><span class="vwLargerWindow-THorTD">{% if page.sitemap.lastmod %}{{ page.sitemap.lastmod | date: "%m-%d-%Y" }}{% else %}Unkown{% endif %}</span></td></tr>
+                <tr class="normalTR"><td class="inLastRow normalTD TD1-3"><a href="{{ base.url }}{{ page.url }}"><span class="vwLargerWindow-THorTD">{{ page.new-and-all-title }}</span></a></td><td class="inLastRow hidden-xs normalTD TD2-3"><span class="vwLargerWindow-THorTD">{% if page.date %}{{ page.date | date: "%m-%d-%Y" }}{% else %}Unknown{% endif %}</span></td><td class="inLastRow hidden-xs normalTD TD3-3"><span class="vwLargerWindow-THorTD">{% if page.lastmod %}{{ page.lastmod | date: "%m-%d-%Y" }}{% else %}Unkown{% endif %}</span></td></tr>
                 {% endunless %}
               {% endif %}
             {% endif %}
@@ -81,9 +81,9 @@ description: >-
         {% for page in sorted_by_title %} 
             {% if page.layout != 'redirect' %}
               {% if page.new-and-all-title %}
-                {% if page.sitemap.lastmod == nil %}
+                {% if page.lastmod == nil %}
                   {% unless page.date %}
-                  <tr class="normalTR"><td class="inLastRow normalTD TD1-3"><a href="{{ base.url }}{{ page.url }}"><span class="vwLargerWindow-THorTD">{{ page.new-and-all-title }}<span></a></td><td class="inLastRow hidden-xs normalTD TD2-3"><span class="vwLargerWindow-THorTD">{% if page.date %}{{ page.date | date: "%m-%d-%Y" }}{% else %}Unknown{% endif %}</span></td><td class="inLastRow hidden-xs normalTD TD3-3"><span class="vwLargerWindow-THorTD">{% if page.sitemap.lastmod %}{{ page.sitemap.lastmod | date: "%m-%d-%Y" }}{% else %}Unkown{% endif %}</span></td></tr>
+                  <tr class="normalTR"><td class="inLastRow normalTD TD1-3"><a href="{{ base.url }}{{ page.url }}"><span class="vwLargerWindow-THorTD">{{ page.new-and-all-title }}<span></a></td><td class="inLastRow hidden-xs normalTD TD2-3"><span class="vwLargerWindow-THorTD">{% if page.date %}{{ page.date | date: "%m-%d-%Y" }}{% else %}Unknown{% endif %}</span></td><td class="inLastRow hidden-xs normalTD TD3-3"><span class="vwLargerWindow-THorTD">{% if page.lastmod %}{{ page.lastmod | date: "%m-%d-%Y" }}{% else %}Unkown{% endif %}</span></td></tr>
                   {% endunless %}
                 {% endif %}
               {% endif %}
