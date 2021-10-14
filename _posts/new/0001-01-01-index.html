@@ -1,0 +1,94 @@
+---
+layout: default
+active: more
+permalink: /new/
+new-and-all-title: New Pages (Sorted by Most Recent)
+title: New Pages on Saving.Love (Sorted by Most Recent)
+description: >-
+    The newest pages of Saving.Love sorted by what's most recently shared.
+---
+
+
+  <h1 class="title">New Pages</h1>
+  <h2 class="subtitle">Sorted by First Shared:</h2>
+  <div class="middleTableContentContainer">
+    <div class="middleTbodyContentContainer">
+      <div class="actualContentRow">
+
+
+        <div class="col-xs-36 col-sm-36 col-md-36 col-lg-36 actualContentCell">
+          <div class="textContainer">
+            <p class="vwLargerWindow-p textCenter"><span class="pSpan">Pages without a "first shared" date appear last unless it has a "last updated" date, sorted alphabetically.</span></p>
+          </div>
+        </div>
+        <div class="col-xs-36 col-sm-36 col-md-36 col-lg-36 actualContentCell">
+			    <table class="tftable">
+
+            <tr class="normalTR"><th class="normalTH TH1-3"><span class="vwLargerWindow-THorTD">Page</span></th><th class="hidden-xs normalTH TH2-3"><span class="vwLargerWindow-THorTD">First Shared<br>Month/Day/Year</span></th><th class="hidden-xs normalTH TH3-3"><span class="vwLargerWindow-THorTD">Last Updated (Estimate)<br>Month/Day/Year</span></th></tr>
+
+
+
+      
+
+
+
+
+
+
+
+
+<!--- Displays posts with a title, with a date, and with a last modified date. --->
+      {% capture now %}{{'2020-12-12' | date: '%s' | plus: 0 %}}{% endcapture %}
+      {% for post in site.posts %}
+        {% capture date %}{{post.date | date: '%s' | plus: 0 %}}{% endcapture %}
+        {% if post.date and date > now %}
+          {% if page.layout != 'redirect' %}
+            {% if post.new-and-all-title %}
+              {% if post.sitemap.lastmod != nil %}
+                <tr class="normalTR"><td class="inLastRow normalTD TD1-3"><a href="{{ base.url }}{{ post.url }}"><span class="vwLargerWindow-THorTD">{{ post.new-and-all-title }}</span></a></td><td class="inLastRow hidden-xs normalTD TD2-3"><span class="vwLargerWindow-THorTD">{% if post.date and date > now %}{{ post.date | date: "%m-%d-%Y" }}{% else %}Unknown{% endif %}</span></td><td class="inLastRow hidden-xs normalTD TD3-3"><span class="vwLargerWindow-THorTD">{% if post.sitemap.lastmod %}{{ post.sitemap.lastmod | date: "%m-%d-%Y" }}{% else %}Unkown{% endif %}</span></td></tr>
+              {% endif %}
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+<!--- Displays posts with a title, without a date, and with a last modified date. --->
+{% capture now %}{{'2020-12-12' | date: '%s' | plus: 0 %}}{% endcapture %}
+{% assign posts = site.posts %}
+{% for post in posts reversed %}
+  {% capture date %}{{post.date | date: '%s' | plus: 0 %}}{% endcapture %}
+  {% if post.date and now > date %}
+    {% if page.layout != 'redirect' %}
+      {% if post.new-and-all-title %}
+        {% if post.sitemap.lastmod != nil %}
+          <tr class="normalTR"><td class="inLastRow normalTD TD1-3"><a href="{{ base.url }}{{ post.url }}"><span class="vwLargerWindow-THorTD">{{ post.new-and-all-title }}</span></a></td><td class="inLastRow hidden-xs normalTD TD2-3"><span class="vwLargerWindow-THorTD">{% if post.date and date > now %}{{ post.date | date: "%m-%d-%Y" }}{% else %}Unknown{% endif %}</span></td><td class="inLastRow hidden-xs normalTD TD3-3"><span class="vwLargerWindow-THorTD">{% if post.sitemap.lastmod %}{{ post.sitemap.lastmod | date: "%m-%d-%Y" }}{% else %}Unkown{% endif %}</span></td></tr>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+
+<!--- Displays posts with a title, without a date, and without a last modified date. --->
+{% capture now %}{{'2020-12-12' | date: '%s' | plus: 0 %}}{% endcapture %}
+{% assign posts = site.posts %}
+{% for post in posts reversed %}
+  {% capture date %}{{post.date | date: '%s' | plus: 0 %}}{% endcapture %}
+    {% if page.layout != 'redirect' %}
+      {% if post.new-and-all-title %}
+        {% if post.sitemap.lastmod == nil %}
+          <tr class="normalTR"><td class="inLastRow normalTD TD1-3"><a href="{{ base.url }}{{ post.url }}"><span class="vwLargerWindow-THorTD">{{ post.new-and-all-title }}</span></a></td><td class="inLastRow hidden-xs normalTD TD2-3"><span class="vwLargerWindow-THorTD">{% if post.date and date > now %}{{ post.date | date: "%m-%d-%Y" }}{% else %}Unknown{% endif %}</span></td><td class="inLastRow hidden-xs normalTD TD3-3"><span class="vwLargerWindow-THorTD">{% if post.sitemap.lastmod %}{{ post.sitemap.lastmod | date: "%m-%d-%Y" }}{% else %}Unkown{% endif %}</span></td></tr>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+{% endfor %}
+          </table>	
+        </div>
+        
+
+  {% include footerNav.html %}
+
+
+</body>
+
+</html>
