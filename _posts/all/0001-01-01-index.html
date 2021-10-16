@@ -23,11 +23,11 @@ description: >-
 
     <!--- Displays posts with a title, with a date, and with a last modified date. --->
 
-    {% capture now %}{{'2020-12-12' | date: '%s' | plus: 0 %}}{% endcapture %}
+    {% capture now %}{{'2020-12-12' | date: '%s' | plus: 0 }}{% endcapture %}
     {% assign topics_by_letter-one = site.posts | "posts.new-and-all-title" %}
     {% assign topics_by_letter = topics_by_letter-one | sort: 'new-and-all-title' %}
     {% for post in topics_by_letter %}
-      {% capture date %}{{post.date | date: '%s' | plus: 0 %}}{% endcapture %}
+      {% capture date %}{{ post.date | date: '%s' | plus: 0 }}{% endcapture %}
       {% if page.layout != 'redirect' %}
         {% if post.new-and-all-title %}
             <tr class="normalTR"><td class="inLastRow normalTD TD1-3"><a href="{{ base.url }}{{ post.url }}"><span class="vwLargerWindow-THorTD">{{ post.new-and-all-title }}</span></a></td><td class="inLastRow hidden-xs normalTD TD2-3"><span class="vwLargerWindow-THorTD">{% if post.date and date > now %}{{ post.date | date: "%m-%d-%Y" }}{% else %}Unknown{% endif %}</span></td><td class="inLastRow hidden-xs normalTD TD3-3"><span class="vwLargerWindow-THorTD">{% if post.sitemap.lastmod %}{{ post.sitemap.lastmod | date: "%m-%d-%Y" }}{% else %}Unkown{% endif %}</span></td></tr>
