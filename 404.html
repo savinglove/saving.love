@@ -1,29 +1,37 @@
 ---
 
 ---
-<script>
-var jekyllPages = [];
+<!DOCTYPE html>
+<head>
+    <script>
+        var jekyllPages = [];
+        
+        // Posts
+        {% for post in site.posts %}
+        jekyllPages.push("{{ site.url }}{{ post.url }}");
+        {% endfor %}
+        
+        function jekyllFixCaseSensitiveUrl() {
+            var url = window.location.toString();
+            
+            if (url.slice(-1) === "/"){
+                url = url.slice(0, -1);
+            }
+            
+            var page = jekyllPages.map(function(value) {
+                return value.toLowerCase();
+            });
+            var i = page.indexOf(url.toLowerCase());
+            
+            if (i !== -1) {
+                window.location = jekyllPages[i];
+            }
+        }
+        location = jekyllFixCaseSensitiveUrl;
+    </script>
+    
+</head>
+<body>
 
-// Posts
-{% for post in site.posts %}
-jekyllPages.push("{{ site.url }}{{ post.url }}");
-{% endfor %}
-
-function jekyllFixCaseSensitiveUrl() {
-    var url = window.location.toString();
-    
-    if (url.slice(-1) === "/"){
-        url = url.slice(0, -1);
-    }
-    
-    var page = jekyllPages.map(function(value) {
-        return value.toLowerCase();
-    });
-    var i = page.indexOf(url.toLowerCase());
-    
-    if (i !== -1) {
-        window.location = jekyllPages[i];
-    }
-}
-window.onload = jekyllFixCaseSensitiveUrl;
-</script>
+</body>
+</html>
