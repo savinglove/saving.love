@@ -5,8 +5,8 @@ layout: default
 
 var allposts = [];  
 function redirectToCorrectPage() {
-  console.log("Unable to find page. Trying other URL cases.");
-	{% for post in site.pages %}  
+  console.log("Unable to find page/post. Trying other URL cases.");
+	{% for post in site.posts %}  
 		allposts.push("{{ post.url }}");  
 	{% endfor %}  
 	var url = window.location.pathname;
