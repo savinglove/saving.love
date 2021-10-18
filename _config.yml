@@ -1,3 +1,5 @@
 markdown: redcarpet
 url: http://saving.love
 exclude: ['README.md']
+repository: miracleshack/saving.love
+theme: null
