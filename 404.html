@@ -1,6 +1,7 @@
 ---
 
 ---
+<script>
 var allposts = [];  
 function redirectToCorrectPage() {  
 	{% for post in site.posts %}  
@@ -20,3 +21,4 @@ function redirectToCorrectPage() {
 	}  
 }  
 window.onload = redirectToCorrectPage;
+</script>
