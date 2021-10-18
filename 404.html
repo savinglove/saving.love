@@ -2,23 +2,28 @@
 
 ---
 <script>
-var allposts = [];  
-function redirectToCorrectPage() {  
-	{% for post in site.posts %}  
-		allposts.push("{{ site.url }}{{ post.url }}");  
-	{% endfor %}  
-	var url = window.location.toString();  
-	if (url.slice(-1) === "/") {  
-		 url = url.slice(0, -1);  
-	}  
-	var allpostsUpperCase = allposts.map(function(value) {  
-		return value.toUpperCase();  
-	});  
-	var i = allpostsUpperCase.indexOf(url.toUpperCase());  
-	if (i != -1) {  
-		console.log(allposts[i]);  
-		window.location = allposts[i];  
-	}  
-}  
-window.onload = redirectToCorrectPage;
+var jekyllPages = [];
+
+// Posts
+{% for post in site.posts %}
+jekyllPages.push("{{ site.url }}{{ post.url }}");
+{% endfor %}
+
+function jekyllFixCaseSensitiveUrl() {
+    var url = window.location.toString();
+    
+    if (url.slice(-1) === "/"){
+        url = url.slice(0, -1);
+    }
+    
+    var page = jekyllPages.map(function(value) {
+        return value.toLowerCase();
+    });
+    var i = page.indexOf(url.toLowerCase());
+    
+    if (i !== -1) {
+        window.location = jekyllPages[i];
+    }
+}
+window.onload = jekyllFixCaseSensitiveUrl;
 </script>
