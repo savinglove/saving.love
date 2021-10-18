@@ -1,5 +1,9 @@
 ---
+active: home
+description: >-
+    404 Error, perhaps try going to the previous page.
 layout: default
+title: This 404 page looks for capitolization mistakes, trying to redirect you to the right page.
 sitemap: false
 ---
 <script>
@@ -32,3 +36,29 @@ function redirectToCorrectPage() {
 window.onload = redirectToCorrectPage;
 
 </script>
+
+
+<!-- YYYY-MM-DD -->
+
+<h1 class="title">Attempting to redirect you.</h1>
+<h2 class="subtitle">Links/URLs require correct capitalization.</h2>
+<div class="middleTableContentContainer">
+  <div class="middleTbodyContentContainer">
+    <div class="actualContentRow">
+
+      <div class="col-xs-36 col-sm-36 col-md-36 col-lg-36 actualContentCell">
+        <div class="textContainer">
+			<p class="vwLargerWindow-p textCenter"><span class="pSpan">Looking to see if you missed any capitalization or lowercase letters.<br>If you don't redirect in less than thirty seconds, you've reached a dead link.</span></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+{% include footerNav.html %}
+
+</body>
+
+</html>
