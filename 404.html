@@ -3,6 +3,7 @@
 ---
 <!DOCTYPE html>
 <head>
+    <script src="{{ base }}/jquery.js"></script>
     <script>
         var jekyllPages = [];
         
@@ -27,7 +28,7 @@
                 window.location = jekyllPages[i];
             }
         }
-        location = jekyllFixCaseSensitiveUrl;
+        window.onload = jekyllFixCaseSensitiveUrl;
     </script>
     
 </head>
