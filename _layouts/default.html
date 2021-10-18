@@ -251,6 +251,8 @@
 }
 
 .navbar-hoverEffect-1-cyan {
+  left: unset;
+  top: unset;
   animation: rotate 1.8s linear infinite;
   background: cyan;
   border-radius: 30%;
@@ -272,6 +274,8 @@
 
 
 .navbar-hoverEffect-1-pink {
+  left: unset;
+  top: unset;
   animation: rotate 1.2s linear reverse infinite;
   background: #ff61ec;
   border-radius: 30%;
@@ -7172,11 +7176,56 @@ a.button:hover::before, a.brand:hover::before, a.firstHeaderLinkPrint:hover::bef
 
 <![endif]>
 
+
+
+<style>
+/* Firefox only */
+@-moz-document url-prefix() { 
+  .imgrectCaptionChild>.imgCaption {
+     transform: translateX(-50%);
+  }
+
+  @media (max-width:777px) {
+    .imgCaption.col-xs-alone {
+      transform: none;
+    }
+    .textCaptionHeader-xs {
+      height: auto;
+    }
+  }
+  @media (min-width:778px) and (max-width:1188px) {
+    .imgCaption.col-sm-alone {
+      transform: none;
+    }
+    .textCaptionHeader-sm {
+      height: auto;
+    }
+  }
+  @media (min-width:1189px) and (max-width:1398px) {
+    .imgCaption.col-md-alone {
+      transform: none;
+    }
+    .textCaptionHeader-md {
+      height: auto;
+    }
+  }  
+  @media (min-width:1399px) {
+    .imgCaption.col-lg-alone {
+      transform: none;
+    }
+    .textCaptionHeader-lg {
+      height: auto;
+    }
+  }
+}
+</style>
+
 <style media="print">
 
 
 
 </style>
+
 
 
 {% include headerNav.html %}
