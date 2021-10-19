@@ -251,8 +251,6 @@
 }
 
 .navbar-hoverEffect-1-cyan {
-  left: unset;
-  top: unset;
   animation: rotate 1.8s linear infinite;
   background: cyan;
   border-radius: 30%;
@@ -274,8 +272,6 @@
 
 
 .navbar-hoverEffect-1-pink {
-  left: unset;
-  top: unset;
   animation: rotate 1.2s linear reverse infinite;
   background: #ff61ec;
   border-radius: 30%;
@@ -382,24 +378,24 @@
 
 @keyframes rotate {
     0% {
-        top: 0;
-        left: 8%;
+        transform: translateY(0);
+        transform: translateX(8%);
     }
     25% {
-        top: 8%;
-        left: 0%;
+        transform: translateY(8%);
+        transform: translateX(0);
     }
     50% {
-        top: 16%;
-        left: 8%;
+        transform: translateY(16%);
+        transform: translateX(8%);
     }
     75% {
-        top: 8%;
-        left: 16%;
+        transform: translateY(8%);
+        transform: translateX(16%);
     }
     100% {
-        top: 0;
-        left: 8%;
+        transform: translateY(0);
+        transform: translateX(8%);
     }
     }
     
