@@ -38,9 +38,9 @@ description: >-
 
 
 <!--- Displays posts with a title, with a date, and with a last modified date. --->
-      {% capture now %}{{'2020-12-12' | date: '%s' | plus: 0 %}}{% endcapture %}
+      {% capture now %}{{'2020-12-12' | date: '%s' | plus: 0 }}{% endcapture %}
       {% for post in site.posts %}
-        {% capture date %}{{post.date | date: '%s' | plus: 0 %}}{% endcapture %}
+        {% capture date %}{{post.date | date: '%s' | plus: 0 }}{% endcapture %}
         {% if post.date and date > now %}
           {% if page.layout != 'redirect' %}
             {% if post.new-and-all-title %}
@@ -53,10 +53,10 @@ description: >-
       {% endfor %}
 
 <!--- Displays posts with a title, without a date, and with a last modified date. --->
-{% capture now %}{{'2020-12-12' | date: '%s' | plus: 0 %}}{% endcapture %}
+{% capture now %}{{'2020-12-12' | date: '%s' | plus: 0 }}{% endcapture %}
 {% assign posts = site.posts %}
 {% for post in posts reversed %}
-  {% capture date %}{{post.date | date: '%s' | plus: 0 %}}{% endcapture %}
+  {% capture date %}{{post.date | date: '%s' | plus: 0 }}{% endcapture %}
   {% if post.date and now > date %}
     {% if page.layout != 'redirect' %}
       {% if post.new-and-all-title %}
@@ -70,10 +70,10 @@ description: >-
 
 
 <!--- Displays posts with a title, without a date, and without a last modified date. --->
-{% capture now %}{{'2020-12-12' | date: '%s' | plus: 0 %}}{% endcapture %}
+{% capture now %}{{'2020-12-12' | date: '%s' | plus: 0 }}{% endcapture %}
 {% assign posts = site.posts %}
 {% for post in posts reversed %}
-  {% capture date %}{{post.date | date: '%s' | plus: 0 %}}{% endcapture %}
+  {% capture date %}{{post.date | date: '%s' | plus: 0 }}{% endcapture %}
     {% if page.layout != 'redirect' %}
       {% if post.new-and-all-title %}
         {% if post.sitemap.lastmod == nil %}
