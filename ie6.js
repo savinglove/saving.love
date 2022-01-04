@@ -146,7 +146,7 @@ $(document).ready(function() {
         $(".title").css("font-size","37px"),
         $(".subtitle").css("font-size","32px"),
         $('.paddingPush').css('padding-top', '99px').css('padding-bottom', '99px');
-        document.getElementById("listItemsA1").style.width = "100%",
+        document.getElementById("listItemsA1").style.width = "auto",
         document.getElementById("firstHeaderListItems").style.left="-50%";
         
       }
