@@ -7,13 +7,13 @@
 {% if post.layout = 'redirect' %} 
 <link rel="canonical" href="{{ site.url }}{{ post.redirect_to }}" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta http-equiv="refresh" content="0;url={{ site.url }}{{ post.redirect_to }}" />
+<meta http-equiv="refresh" content="0;url='{{ site.url }}{{ post.redirect_to }}' " />
 {% endif %}
 
 {% if page.layout = 'redirect' %} 
 <link rel="canonical" href="{{ site.url }}{{ page.redirect_to }}" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta http-equiv="refresh" content="0;url={{ site.url }}{{ page.redirect_to }}" />
+<meta http-equiv="refresh" content="0;url='{{ site.url }}{{ page.redirect_to }}' " />
 {% endif %}
 </head>
 
