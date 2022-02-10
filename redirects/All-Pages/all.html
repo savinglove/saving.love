@@ -10,7 +10,7 @@ go-and-redirectHere: /All-Pages/
 
 <head>
 
-{% if post %}
+{% if post.id %}
     
 <link rel="canonical" href="{{ base }}{{ post.go-and-redirectHere }}" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -34,7 +34,7 @@ go-and-redirectHere: /All-Pages/
 
     
     
-{% if post %}
+{% if post.id %}
     
     
     <a href="{{ base }}{{ post.go-and-redirectHere }}">Click here if you're not redirected.</a>
