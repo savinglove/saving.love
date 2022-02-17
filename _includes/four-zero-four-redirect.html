@@ -1,15 +1,15 @@
-<script> 
+<script>
  
-var pageOrPosts = [];  
+var pageOrPosts = [];
 function redirectToCorrectPage() {
   console.log("Unable to find page. Trying other URL cases.");
 	
 	{% assign allJekyllPages = site.pages %}
 	{% assign allJekyllPosts = site.posts %}
 	{% assign pagesOrPosts = allJekyllPages | concat: allJekyllPosts %}
-	{% for pageAndPost in pagesOrPosts %}
-		pageOrPosts.push("{{ pageOrPosts.url }}");  
-	{% endfor %}  
+	{% for pageOrPost in pagesOrPosts %}
+		pageOrPosts.push("{{ pageOrPost.url }}");
+	{% endfor %}
 	
 	
 	
