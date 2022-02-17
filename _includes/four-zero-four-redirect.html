@@ -1,34 +1,42 @@
-<script>
-
+<script> 
+ 
 var pageOrPosts = [];  
-function redirectToCorrectPageOrPost() {
+function redirectToCorrectPage() {
   console.log("Unable to find page. Trying other URL cases.");
+	{% for post in site.pages %}  
+		allposts.push("{{ post.url }}");  
+	{% endfor %}  
+	
+	
+	
 	{% assign allJekyllPages = site.pages %}
 	{% assign allJekyllPosts = site.posts %}
 	{% assign pagesOrPosts = allJekyllPages | concat: allJekyllPosts %}
 	{% for pageAndPost in pagesOrPosts %}
 		pageOrPosts.push("{{ pageOrPost.url }}");  
 	{% endfor %}  
+	
+	
+	
 	var url = window.location.pathname;
 	// strip trailing /
 	if (url.slice(-1) === "/") {  
 		 url = url.slice(0, -1);  
 	}
-	var pageOrPostUpperCase = pageOrPosts.map(function(value) {  
+	var pageOrPostsUpperCase = pageOrPosts.map(function(value) {  
 	  	// strip trailing /
 	  	if (value.slice(-1) === "/") {  
 			value = value.slice(0, -1);  
 	  	}
 		return value.toUpperCase();  
 	});  
-	console.log("Looking for "+url.toUpperCase() + " in "+pageOrPostUpperCase);
-	var i = pageOrPostUpperCase.indexOf(url.toUpperCase());  
+	console.log("Looking for "+url.toUpperCase() + " in "+pageOrPostsUpperCase);
+	var i = pageOrPostsUpperCase.indexOf(url.toUpperCase());  
 	if (i != -1) {  
 		console.log(pageOrPosts[i]);  
 		window.location = pageOrPosts[i];  
 	}  
 }  
-	 
-	 
-window.onload = redirectToCorrectPageOrPost;
-</script>
+window.onload = redirectToCorrectPage;
+</script> 
+ 
