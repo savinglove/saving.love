@@ -14,15 +14,15 @@ function redirectToCorrectPageOrPost() {
 	if (url.slice(-1) === "/") {  
 		 url = url.slice(0, -1);  
 	}
-	var pageOrPostsUpperCase = pageOrPosts.map(function(value) {  
+	var pageOrPostUpperCase = pageOrPosts.map(function(value) {  
 	  	// strip trailing /
 	  	if (value.slice(-1) === "/") {  
 			value = value.slice(0, -1);  
 	  	}
 		return value.toUpperCase();  
 	});  
-	console.log("Looking for "+url.toUpperCase() + " in "+pageOrPostsUpperCase);
-	var i = pageOrPostsUpperCase.indexOf(url.toUpperCase());  
+	console.log("Looking for "+url.toUpperCase() + " in "+pageOrPostUpperCase);
+	var i = pageOrPostUpperCase.indexOf(url.toUpperCase());  
 	if (i != -1) {  
 		console.log(pageOrPosts[i]);  
 		window.location = pageOrPosts[i];  
