@@ -1,63 +1,57 @@
-<script>
-
-var allposts = [];  
-function redirectToCorrectPost() {
-  console.log("Unable to find page/post. Trying other URL cases.");
-	{% for post in site.posts %}  
-		allposts.push("{{ post.url }}");  
-	{% endfor %}  
-	var url = window.location.pathname;
-	// strip trailing /
-	if (url.slice(-1) === "/") {  
-		 url = url.slice(0, -1);  
-	}
-	var allpostsUpperCase = allposts.map(function(value) {  
-	  	// strip trailing /
-	  	if (value.slice(-1) === "/") {  
-			value = value.slice(0, -1);  
-	  	}
-		return value.toUpperCase();  
-	});  
-	console.log("Looking for "+url.toUpperCase() + " in "+allpostsUpperCase);
-	var i = allpostsUpperCase.indexOf(url.toUpperCase());  
-	if (i != -1) {  
-		console.log(allposts[i]);  
-		window.location = allposts[i];  
-	}  
-}  
+<script> 
+var allposts = []; 
+function redirectToCorrectPost() { 
+  console.log("Unable to find page/post. Trying other URL cases."); 
+	{% for post in site.posts %} 
+		allposts.push("{{ post.url }}"); 
+	{% endfor %} 
+	var url = window.location.pathname; 
  
-if ((redirectToCorrectPost.length != null) || (redirectToCorrectPost.length > 2)) {
-window.onload = redirectToCorrectPost; 
-}
-
-
-
-var allpages = [];  
-function redirectToCorrectPage() {
-	{% for page in site.pages %}  
-		allpages.push("{{ page.url }}");  
-	{% endfor %}  
-	var url = window.location.pathname;
-	// strip trailing /
-	if (url.slice(-1) === "/") {  
-		 url = url.slice(0, -1);  
-	}
-	var allpagesUpperCase = allpages.map(function(value) {  
-	  	// strip trailing /
-	  	if (value.slice(-1) === "/") {  
-			value = value.slice(0, -1);  
-	  	}
-		return value.toUpperCase();  
-	});  
-	console.log("Looking for "+url.toUpperCase() + " in "+allpagesUpperCase);
-	var i = allpagesUpperCase.indexOf(url.toUpperCase());  
-	if (i != -1) {  
-		console.log(allpages[i]);  
-		window.location = allpages[i];  
-	}  
-}  
+	if (url.slice(-1) === "/") { 
+		 url = url.slice(0, -1); 
+	} 
+	var allpostsUpperCase = allposts.map(function(value) { 
  
-if ((redirectToCorrectPage.length != null) || (redirectToCorrectPage.length > 2)) {
-window.onload = redirectToCorrectPage; 
-}
+	  	if (value.slice(-1) === "/") { 
+			value = value.slice(0, -1); 
+	  	} 
+		return value.toUpperCase(); 
+	}); 
+	console.log("Looking for "+url.toUpperCase() + " in "+allpostsUpperCase); 
+	var i = allpostsUpperCase.indexOf(url.toUpperCase()); 
+	if (i != -1) { 
+		console.log(allposts[i]); 
+		window.location = allposts[i]; 
+	} 
+} 
+window.location.href = redirectToCorrectPost; 
+ 
+ 
+ 
+var allpages = []; 
+function redirectToCorrectPage() { 
+	{% for page in site.pages %} 
+		allpages.push("{{ page.url }}"); 
+	{% endfor %} 
+	var url = window.location.pathname; 
+ 
+	if (url.slice(-1) === "/") { 
+		 url = url.slice(0, -1); 
+	} 
+	var allpagesUpperCase = allpages.map(function(value) { 
+ 
+	  	if (value.slice(-1) === "/") { 
+			value = value.slice(0, -1); 
+	  	} 
+		return value.toUpperCase(); 
+	}); 
+	console.log("Looking for "+url.toUpperCase() + " in "+allpagesUpperCase); 
+	var i = allpagesUpperCase.indexOf(url.toUpperCase()); 
+	if (i != -1) { 
+		console.log(allpages[i]); 
+		window.location = allpages[i]; 
+	} 
+} 
+ 
+window.location.href = redirectToCorrectPage;
 </script>
