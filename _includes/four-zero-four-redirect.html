@@ -3,8 +3,11 @@
 var allposts = [];  
 function redirectToCorrectPost() {
   console.log("Unable to find page. Trying other URL cases.");
-	{% for post in site.pages %}  
-		allposts.push("{{ post.url }}");  
+	{% assign allJekyllPages = site.pages %}
+	{% assign allJekyllPosts = site.posts %}
+	{% assign pagesAndPosts = allJekyllPages | concat: allJekyllPosts %}
+	{% for pageAndPost in pagesAndPosts %}
+		pageAndPosts.push("{{ pageAndPost.url }}");  
 	{% endfor %}  
 	var url = window.location.pathname;
 	// strip trailing /
@@ -27,34 +30,5 @@ function redirectToCorrectPost() {
 }  
 	 
 	 
-
-var allpages = [];  
-function redirectToCorrectPage() {
-  console.log("Unable to find page. Trying other URL cases.");
-	{% for page in site.pages %}  
-		allpages.push("{{ page.url }}");  
-	{% endfor %}  
-	var url = window.location.pathname;
-	// strip trailing /
-	if (url.slice(-1) === "/") {  
-		 url = url.slice(0, -1);  
-	}
-	var allpagesUpperCase = allpages.map(function(value) {  
-	  	// strip trailing /
-	  	if (value.slice(-1) === "/") {  
-			value = value.slice(0, -1);  
-	  	}
-		return value.toUpperCase();  
-	});  
-	console.log("Looking for "+url.toUpperCase() + " in "+allpagesUpperCase);
-	var i = allpagesUpperCase.indexOf(url.toUpperCase());  
-	if (i != -1) {  
-		console.log(allpages[i]);  
-		window.location = allpages[i];  
-	}  
-}  
-  
-	 
-window.onload = redirectToCorrectPage;
 window.onload = redirectToCorrectPost;
 </script>
