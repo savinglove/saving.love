@@ -8,7 +8,7 @@ function redirectToCorrectPage() {
 	{% assign allJekyllPosts = site.posts %}
 	{% assign pagesOrPosts = allJekyllPages | concat: allJekyllPosts %}
 	{% for pageAndPost in pagesOrPosts %}
-		pageOrPost.push("{{ pageOrPost.url }}");  
+		pageOrPosts.push("{{ pageOrPosts.url }}");  
 	{% endfor %}  
 	
 	
