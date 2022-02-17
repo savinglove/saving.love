@@ -3,11 +3,6 @@
 var pageOrPosts = [];  
 function redirectToCorrectPage() {
   console.log("Unable to find page. Trying other URL cases.");
-	{% for post in site.pages %}  
-		allposts.push("{{ post.url }}");  
-	{% endfor %}  
-	
-	
 	
 	{% assign allJekyllPages = site.pages %}
 	{% assign allJekyllPosts = site.posts %}
