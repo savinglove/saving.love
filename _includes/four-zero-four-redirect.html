@@ -25,7 +25,8 @@ function redirectToCorrectPost() {
 		window.location = allposts[i];  
 	}  
 }  
-window.onload = redirectToCorrectPost;
+	 
+	 
 
 var allpages = [];  
 function redirectToCorrectPage() {
@@ -52,6 +53,10 @@ function redirectToCorrectPage() {
 		window.location = allpages[i];  
 	}  
 }  
-window.onload = redirectToCorrectPage;
 
+ 
+	  
+const completeList = redirectToCorrectPage.concat(redirectToCorrectPost);
+	 
+window.onload = completeList;
 </script>
