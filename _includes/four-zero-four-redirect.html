@@ -14,7 +14,7 @@ function redirectToCorrectPageOrPost() {
 	if (url.slice(-1) === "/") {  
 		 url = url.slice(0, -1);  
 	}
-	var allpostsUpperCase = pageOrPosts.map(function(value) {  
+	var pageOrPostsUpperCase = pageOrPosts.map(function(value) {  
 	  	// strip trailing /
 	  	if (value.slice(-1) === "/") {  
 			value = value.slice(0, -1);  
