@@ -1,8 +1,0 @@
----
-layout: default
-sitemap: false
-permalink: /Inheriting-the-kingdom-of-Heaven/
-rediractz:  /Inheriting-the-kingdom-of-God/
----
-
-{% include rediractz.html %}
