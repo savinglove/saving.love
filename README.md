@@ -1,9 +1,9 @@
 # saving.love
 
 https://saving.love/ <br>
-Information about Heaven. <br><br><br>
+Information about Heaven. <br><br>
 
-No donations or tithes accepted. No profits are made. No income’s earned. <br><br><br> 
+No donations or tithes accepted. No profits are made. No income’s earned. <br><br><br><br><br> 
 
 
 Legacy browsers aren't supported or prioritized. <br>
